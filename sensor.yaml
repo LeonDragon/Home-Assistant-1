@@ -1,0 +1,250 @@
+- platform: yr
+- platform: darksky
+  api_key: cee9d35b052006740bac47bde52b23ba
+  monitored_conditions:
+    - icon
+    - summary
+    - nearest_storm_distance
+    - nearest_storm_bearing
+    - humidity
+    - temperature
+    - apparent_temperature
+    - wind_speed
+    - wind_bearing
+    - uv_index
+    - daily_summary
+    - pressure
+- platform: moon
+- platform: template
+  sensors:
+    weathertoday:
+      friendly_name: "Thời tiết hôm nay"
+      value_template: >-
+        {% if is_state('sensor.dark_sky_icon', 'partly-cloudy-day') %}
+          Ngày trời ít mây
+        {% elif is_state('sensor.dark_sky_icon', 'clear-day') %}
+          Ngày trời trong xanh
+        {% elif is_state('sensor.dark_sky_icon', 'clear-night') %}
+          Đêm trời đẹp
+        {% elif is_state('sensor.dark_sky_icon', 'rain') %}
+          Trời mưa
+        {% elif is_state('sensor.dark_sky_icon', 'wind') %}
+          Gió nhiều
+        {% elif is_state('sensor.dark_sky_icon', 'cloudy') %}
+          Trời nhiều mây
+        {% elif is_state('sensor.dark_sky_icon', 'partly-cloudy-night') %}
+          Đêm trời nhiều mây
+        {% elif is_state('sensor.dark_sky_icon', 'fog') %}
+          Sương mù
+        {% elif is_state('sensor.dark_sky_nearest_storm_distance', 'unknown') %}
+          Không có cơn bão nào
+        {% else %}
+          ...
+        {% endif %}
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /home
+    - type: memory_free
+    - type: memory_use_percent
+    - type: swap_use_percent
+    - type: processor_use
+    - type: last_boot
+    - type: process
+
+- platform: cpuspeed
+
+- platform: mitemp_bt
+  mac: '4C:65:A8:D4:58:76'
+  name: Living Room Temp
+  force_update: true
+  median: 1
+  timeout: 30
+  monitored_conditions:
+    - temperature
+    - humidity
+    - battery
+
+- platform: xiaomi_hygrothermo
+  name: Living Room Condition
+  mac: '4C:65:A8:D4:58:76'
+  scan_interval: 60
+
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+- platform: template
+  sensors:
+    daikin_ac_last_on_operation:
+      friendly_name: "Last on operation"
+      value_template: "{{ state_attr('climate.daikin_ac', 'last_on_operation') }}"
+- platform: template
+  sensors:
+    daikin_ac_mode:
+      friendly_name: "Daikin AC Mode"
+      value_template: >
+        {% if is_state('climate.daikin_ac', 'off') %}
+          off
+        {% elif is_state('sensor.daikin_ac_last_on_operation', 'auto') %}
+          auto
+        {% elif is_state('sensor.daikin_ac_last_on_operation', 'dry') %}
+          dry
+        {% elif is_state('sensor.daikin_ac_last_on_operation', 'cool') %}
+          cool
+        {% elif is_state('sensor.daikin_ac_last_on_operation', 'fan_only') %}
+          fan_only
+        {% elif is_state('sensor.daikin_ac_last_on_operation', 'heat') %}
+          heat
+        {% endif %}
+
+- platform: template
+  sensors:
+    daikin_ac_current_fan_mode:
+      friendly_name: "Current Fan Mode"
+      value_template: "{{ state_attr('climate.daikin_ac', 'fan_mode') }}"
+
+- platform: template
+  sensors:
+    daikin_ac_fan_mode:
+      friendly_name: "Fan Mode"
+      value_template: >
+        {% if is_state('sensor.daikin_ac_current_fan_mode', 'auto') %}
+          Tự động
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'night') %}
+          Ban đêm
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'low') %}
+          Thấp
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'lowMedium') %}
+          Trung bình thấp
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'medium') %}
+          Trung bình
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'mediumHigh') %}
+          Trung bình cao
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'high') %}
+          Cao
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'powerful') %}
+          Tổng lực
+        {% endif %}
+- platform: template
+  sensors:
+    daikin_ac_set_fan_mode:
+      friendly_name: "Set Fan Mode"
+      value_template: >
+        {% if is_state('sensor.daikin_ac_current_fan_mode', 'auto') %}
+          auto
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'night') %}
+          night
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'low') %}
+          low
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'lowMedium') %}
+          lowMedium
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'medium') %}
+          medium
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'mediumHigh') %}
+          mediumHigh
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'high') %}
+          high
+        {% elif is_state('sensor.daikin_ac_current_fan_mode', 'powerful') %}
+          powerful
+        {% endif %}
+- platform: template
+  sensors:
+    xiaomi_current_fan_speed:
+      friendly_name: "Xiaomi Current Fan Speed"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'speed_level') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_state:
+      friendly_name: "Xiaomi Fan State"
+      value_template: >
+        {% if is_state('fan.xiaomi_smart_fan', 'off') %}
+          off
+        {% elif is_state('sensor.xiaomi_current_fan_speed', 'Level 1') %}
+          Level 1
+        {% elif is_state('sensor.xiaomi_current_fan_speed', 'Level 2') %}
+          Level 2
+        {% elif is_state('sensor.xiaomi_current_fan_speed', 'Level 3') %}
+          Level 3
+        {% elif is_state('sensor.xiaomi_current_fan_speed', 'Level 4') %}
+          Level 4
+        {% endif %}
+- platform: template
+  sensors:
+    xiaomi_fan_current_angle:
+      friendly_name: "Xiaomi Fan Current Angle"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'angle') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_angle:
+      friendly_name: "Xiaomi Fan Angle"
+      value_template: >
+        {% if is_state('sensor.xiaomi_fan_oscillate', 'False') %}
+          0
+        {% elif is_state('sensor.xiaomi_fan_current_angle', '30') %}
+          30
+        {% elif is_state('sensor.xiaomi_fan_current_angle', '60') %}
+          60
+        {% elif is_state('sensor.xiaomi_fan_current_angle', '90') %}
+          90
+        {% elif is_state('sensor.xiaomi_fan_current_angle', '120') %}
+          120
+        {% endif %}
+
+- platform: template
+  sensors:
+    xiaomi_fan_oscillate:
+      friendly_name: "Xiaomi Fan Oscillate"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'oscillate') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_led_brightness:
+      friendly_name: "Xiaomi Fan Led brightness"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'led_brightness') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_buzzer:
+      friendly_name: "Xiaomi Fan Buzzer"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'buzzer') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_child_lock:
+      friendly_name: "Xiaomi Fan Child lock"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'child_lock') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_xiaomi_fan_natural_speed:
+      friendly_name: "Xiaomi Fan Natural Mode"
+      value_template: "{{ state_attr('fan.xiaomi_smart_fan', 'natural_speed') }}"
+- platform: template
+  sensors:
+    xiaomi_fan_natural_mode:
+      friendly_name: "Xiaomi Fan Natural Mode"
+      value_template: >
+        {% if is_state('sensor.xiaomi_fan_xiaomi_fan_natural_speed', '0') %}
+          off
+        {% else %}
+          on
+        {% endif %}
+
+- platform: template
+  sensors:
+    anh_s_iphone:
+      friendly_name: "Ánh"
+      value_template: >-
+        {% if is_state('binary_sensor.anh_s_iphone', 'on') %}
+          home
+        {% else %}
+          not home
+        {% endif %}
+- platform: template
+  sensors:
+    trinh_s_mi9:
+      friendly_name: "Thành"
+      value_template: >-
+        {% if is_state('binary_sensor.trinh_s_mi9', 'on') %}
+          home
+        {% else %}
+          not home
+        {% endif %}

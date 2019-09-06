@@ -1,0 +1,416 @@
+i_am_home:
+  alias: I am home
+  sequence:
+  - service: switch.turn_on
+    entity_id: switch.living_room_ceiling_light
+  - service: switch.turn_on
+    entity_id: switch.living_room_wall_light_1
+i_am_leave:
+  alias: I am leave
+  sequence:
+#turn on gate light
+  - service: switch.turn_on
+    entity_id: switch.gate_light
+#turn off bedroom lights
+  - service: switch.turn_off
+    entity_id: switch.bedroom_ceiling_light
+  - service: switch.turn_off
+    entity_id: switch.bedroom_wall_light_1
+  - service: switch.turn_off
+    entity_id: switch.bedroom_wall_light_2
+  - service: switch.turn_off
+    entity_id: switch.bedroom_led_light
+  - service: light.turn_off
+    entity_id: light.bedside_lamp
+#turn off living room lights
+  - service: switch.turn_off
+    entity_id: switch.living_room_ceiling_light
+  - service: switch.turn_off
+    entity_id: switch.living_room_wall_light_1
+  - service: switch.turn_off
+    entity_id: switch.living_room_led_light
+  - service: light.turn_off
+    entity_id: light.gateway_light_7811dcdefc7f
+  - service: light.turn_off
+    entity_id: light.gateway_light_04cf8c91346e
+  - service: light.turn_off
+    entity_id: light.desk_lamp
+
+
+update_location:
+  alias: Update Location
+  sequence:
+  - service: notify.ios_anhs_iphone
+    data:
+      message: "request_location_update"
+  - service: notify.ios_trinhs_ipad
+    data:
+      message: "request_location_update"
+
+i_go_to_bed:
+  alias: I go to bed
+  sequence:
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.daikin_ac
+      temperature: 26
+  - delay: 00:00:05
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.daikin_ac
+      fan_mode: 'night'
+#turn off living room lights
+  - service: switch.turn_off
+    entity_id: switch.living_room_ceiling_light
+  - service: switch.turn_off
+    entity_id: switch.living_room_wall_light_1
+  - service: switch.turn_off
+    entity_id: switch.living_room_led_light
+  - service: light.turn_off
+    entity_id: light.gateway_light_7811dcdefc7f
+  - service: light.turn_off
+    entity_id: light.gateway_light_04cf8c91346e
+  - service: light.turn_off
+    entity_id: light.desk_lamp
+  - service: light.turn_on
+    entity_id: light.bedside_lamp
+    data:
+      brightness: 10
+      rgb_color: [161, 11, 0]
+#turn off bedroom lights
+  - service: switch.turn_off
+    entity_id: switch.bedroom_ceiling_light
+  - service: switch.turn_off
+    entity_id: switch.bedroom_wall_light_1
+  - service: switch.turn_off
+    entity_id: switch.bedroom_wall_light_2
+  - service: switch.turn_off
+    entity_id: switch.bedroom_led_light
+
+play_game:
+  alias: I want play game
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.tivi
+      source: Play_Station
+
+watch_tv:
+  alias: I want watch tv
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.tivi
+      source: Viettel_TV
+
+power_tv:
+  alias: Power TV
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgCMAJSVEjcTNxM3ExISExITEhMSExI3EzcTNxITEhMSExITEhMSEhM3ExITEhMSEhMSExITEjcTEhM3EzcSOBI4EjcTNxMABgaVlBI4EjgSNxMSExITEhITEhMSOBI3EzcTEhMSExISExITEhMSOBITEhITEhMSExITEhI4EhMSOBI3EzcTNxI4EjcTAA0FAAAAAAAAAAAAAAAA
+power_soundbar:
+  alias: Power Soundbar
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgBQAJWTERAREBEQERARMRExERARERAyEDERMhExERAQERAREBEQlRAREBEREBAREBEQERAREBEQMhAyETEQERAyETEQMhAyERAREBAREDIRAA0FAAAAAAAAAAA=
+viettel_tv:
+  alias: Viettel TV
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.tivi
+      source: Viettel_TV
+mibox:
+  alias: Mibox
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.tivi
+      source: Mibox
+playstation:
+  alias: Play Station
+  sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.tivi
+      source: Play_Station
+mute:
+  alias: Mute
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgBQAJWUEBEQERAREBEQMhAyERAQERExEDIQMhAyEBIPEREQEBIPlRARERAQERAREDIREBAREBIPMhAyEDIQEg8RETERMRExERAREBEQEDIRAA0FAAAAAAAAAAA=
+soundbar_source:
+  alias: Soundbar Source
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgCgAJSUERAREBEQERARMRExEg8REBIwETERMRExERAREBIPERARlBEQEg8REBEQETEREBIwEg8RMRIwETESDxIPETEREBExERAREBEQETESAAcelZMSDxIPERAREBExETEREBEQETERMRIwETEREBEQERAREBGUEg8REBEQERARMRIPEjASDxExETERMREQERARMREQEjASDxEQERASMBEADQUAAAAAAAAAAA==
+mitsubishi_fan_on:
+  alias: Mitsubishi Fan on
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgCGAGk1DScNJw0NDQ0MDg0nDQ0NDQwoDScODA0nDQ0MDgwoDScNDQwoDScODAwoDQ0MDgwODA4MDgwoDQ0MDgwODCgNDQwODA4LDwsPDA4LDwwOCykNJw0NDA4MKA0NDA4LDwspDScNDQsPCw8MDgsPDA4MDgsPCw8MDgsPCygNDgsPDCcNAA0FAAA=
+  - service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.mitsubishi_fan_state
+mitsubishi_fan_off:
+  alias: Mitsubishi Fan off
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgCGAGk1DScNJw0NDQ0MDg0nDQ0NDQwoDScODA0nDQ0MDgwoDScNDQwoDScODAwoDQ0MDgwODA4MDgwoDQ0MDgwODCgNDQwODA4LDwsPDA4LDwwOCykNJw0NDA4MKA0NDA4LDwspDScNDQsPCw8MDgsPDA4MDgsPCw8MDgsPCygNDgsPDCcNAA0FAAA=
+  - service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.mitsubishi_fan_state
+mitsubishi_fan_speed:
+  alias: Mitsubishi Fan Speed
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgCGAGszDiYOJg4MDgwODA4mDgwODA4mDiYODA4mDgwODA4mDiYODA4mDiYODA4mDgwODA4MDgwODA4mDgwODA4MDiYODA4MDgwODA4MDgwODA4MDiYOJg4MDgwOJg4MDgwODA4mDgwOJg4MDgwODA4MDgwODA4MDgwODA4MDgwOJQ8MDiUPAA0FAAA=
+mitsubishi_fan_timer:
+  alias: Mitsubishi Fan Timer
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - JgCGAGszDyUPJQ4MDgwODA4mDgwODA4mDiYODA4mDgwODA4mDiYODA4mDiYODA4mDgwODA4MDgwODA4mDgwODA4MDiYODA4MDgwODA4MDgwODA4MDiYOJg4MDgwOJg4MDgwODA4mDgwODA4mDgwODA4MDgwODA4MDgwODA4MDgwODA4mDiYOAA0FAAA=
+xiaomi_fan_set_direction_left:
+  alias: Xiaomi Fan Set Direction Left
+  sequence:
+  - service: fan.set_direction
+    entity_id: fan.xiaomi_smart_fan
+    data:
+      direction: left
+xiaomi_fan_set_direction_right:
+  alias: Xiaomi Fan Set Direction Right
+  sequence:
+  - service: fan.set_direction
+    entity_id: fan.xiaomi_smart_fan
+    data:
+      direction: right
+hitachi_fan_on:
+  alias: Hitachi Fan on
+  sequence:
+  - service: switch.turn_on
+    entity_id: switch.mi_plug_2
+  - delay:
+      milliseconds: 15
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBIAAABKpQTERQ2ExITEhMRExITERQ2EzcTEhMRExISEhQ2FBETERQ2FDYUNhQ2FDYUERISExITERQRExETEhMSEzcTNhQ2FAANBQ==
+  - delay:
+      milliseconds: 5
+  - service_template: >
+      {% if is_state('input_select.hitachi_fan_speed', '1') %}
+        script.hitachi_fan_1
+      {% elif is_state('input_select.hitachi_fan_speed', '2') %}
+        script.hitachi_fan_2
+      {% elif is_state('input_select.hitachi_fan_speed', '3') %}
+        script.hitachi_fan_3
+      {% elif is_state('input_select.hitachi_fan_speed', '4') %}
+        script.hitachi_fan_4
+      {% endif %}
+hitachi_fan_off:
+  alias: Hitachi Fan off
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBIAAABKpQTERQ2ExITEhMRExITERQ2EzcTEhMRExISEhQ2FBETERQ2FDYUNhQ2FDYUERISExITERQRExETEhMSEzcTNhQ2FAANBQ==
+  - delay:
+      milliseconds: 10
+  - service: switch.turn_off
+    entity_id: switch.mi_plug_2
+hitachi_fan_1:
+  alias: Hitachi Fan 1
+  sequence:
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_down
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_down
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_down
+hitachi_fan_2:
+  alias: Hitachi Fan 2
+  sequence:
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_down
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_down
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_down
+  - delay:
+      milliseconds: 7
+  - service: script.hitachi_fan_speed_up
+hitachi_fan_4:
+  alias: Hitachi Fan 4
+  sequence:
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_up
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_up
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_up
+hitachi_fan_3:
+  alias: Hitachi Fan 3
+  sequence:
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_up
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_up
+  - delay:
+      milliseconds: 5
+  - service: script.hitachi_fan_speed_up
+  - delay:
+      milliseconds: 7
+  - service: script.hitachi_fan_speed_down
+hitachi_fan_speed:
+  alias: Hitachi Fan Speed
+  sequence:
+  - service: input_select.select_option
+    data_template:
+      entity_id: input_select.hitachi_fan_speed
+      option: '{{ speed }}'
+hitachi_fan_speed_up:
+  alias: Hitachi Fan Speed Up
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBQAAABKpMUERM3ExETEhMSEhITEhI4EzYUERMSExETEhM3EhITEhM3EzcTERM3EzcTEhMRExITERQREzcTERQREzcTNxM3EgAFzQABKkkTAA0FAAAAAAAAAAA=
+hitachi_fan_speed_down:
+  alias: Hitachi Fan Speed Down
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBQAAABKpQTEhI4ExEUERMRFBESExI3EzcTEhMSEhITEhI4ExEUERI4ExETEhISFBESExISExISEhM3EzcTNxM3EzcTNxM3EwAFzQABKUoTAA0FAAAAAAAAAAA=
+hitachi_fan_set_oscillating:
+  alias: Hitachi Fan Set Oscillating
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBQAAABKZUTERM3ExISEhMSExITERM3EjgSExMRExISEhM3FBESEhM3EzcUNhM3FBETERQRExITERMSExETEhI4EzcTNxI4EwAFzQABKkkTAA0FAAAAAAAAAAA=
+
+weather_today:
+  sequence:
+    - service: tts.google_say
+      entity_id: media_player.living_room
+      data_template:
+        message: >-
+          Sau đây là thông báo thời tiết.
+          {% if is_state('sensor.dark_sky_icon', 'partly-cloudy-day') %}
+            Hiện tại trời ít mây.
+          {% elif is_state('sensor.dark_sky_icon', 'clear-day') %}
+            Hôm nay trời đẹp, bạn có thể yên tâm với các hoạt động ngoài trời.
+          {% elif is_state('sensor.dark_sky_icon', 'clear-night') %}
+            Đêm nay trời đẹp.
+          {% elif is_state('sensor.dark_sky_icon', 'rain') %}
+            Khả năng trời mưa rất cao, bạn nên đem theo ô hoặc áo mưa nếu cần di chuyển ra ngoài.
+          {% elif is_state('sensor.dark_sky_icon', 'wind') %}
+            Hôm nay trời nhiều gió, bạn nhớ đóng cửa sổ trước khi đi ra ngoài.
+          {% elif is_state('sensor.dark_sky_icon', 'cloudy') %}
+            Trời nhiều mây, bạn nhớ đem theo ô hoặc áo mưa nếu ra ngoài, đề phòng trời mưa đột ngột.
+          {% elif is_state('sensor.dark_sky_icon','partly-cloudy-night') %}
+            Hiện tại bên ngoài trời nhiều mây.
+          {% elif is_state('sensor.dark_sky_icon', 'fog') %}
+            Hiện tại trời nhiều sương mù.
+          {% endif %}
+          Nhiệt độ ngoài trời hiện tại vào khoảng {{states('sensor.dark_sky_temperature')|int}} độ cê, Độ ẩm là {{states('sensor.dark_sky_humidity')|int}} phần trăm , chỉ số tia UV là {{states('sensor.dark_sky_uv_index')}}
+notify_weather:
+  sequence:
+  - service: tts.google_say
+    entity_id: media_player.living_room
+    data_template:
+      message: "Nhiệt độ ngoài trời hiện tại vào khoảng {{states('sensor.dark_sky_temperature')|int}} độ cê, Độ ẩm là {{states('sensor.dark_sky_humidity')|int}} phần trăm , chỉ số tia UV là {{states('sensor.dark_sky_uv_index')|int}} "
+      cache: false
+notify_time:
+  sequence:
+  - service: media_player.play_media
+    entity_id: media_player.living_room
+    data:
+      media_content_id: "https://thanhtt.duckdns.org/local/Music/ring.mp3"
+      media_content_type: audio/mp3
+  - delay: 00:00:10
+  - service: tts.google_say
+    entity_id: media_player.living_room
+    data_template:
+      message: " Xin thông báo, bây giờ là {{ now().hour }} giờ"
+notify_date:
+  sequence:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.living_room_camera
+        filename: /config/www/photos/living_room_camera.jpg
+    - service: notify.telegram_message
+      data:
+        title: '*Camera An Ninh*'
+        message: " Phát hiện báo động"
+    - service: notify.telegram_message
+      data:
+        title: '*Camera An Ninh*'
+        message: " Phát hiện báo động"
+        data:
+          photo:
+            - file: /config/www/photos/living_room_camera.jpg
+              caption: Hình ảnh ghi vào lúc {{ states('sensor.time') }} ngày {{ states('sensor.date') }}.
+camera_snapshot:
+  sequence:
+    - service: camera.snapshot
+      data:
+        entity_id: camera.living_room_camera
+        filename: /config/www/photos/living_room_camera_{{ now().strftime("%Y%m%d-%H%M%S") }}.jpg
+turn_on_tivi:
+  alias: Turn on Tivi
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - 'JgBGAJWPFTMTNRQ0FA8UDxQPEhESERI2EjYTNRQPFA8UDxUOFQ8SNRQPFA8UNBQ0EhESERI2ExAUNBUzFQ4VDxUzFDQUDxQADQUAAA=='
+turn_off_tivi:
+  alias: Turn off Tivi
+  sequence:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.141
+      packet:
+      - 'JgDSAJaUEzYTNxI4EhISEhMSERMRExI4EjgSNxMSEBQSEhITEBQRExITERMRNhU3EhMQFBI3EzcSOBM2EhMRExI3EjgSEhIABgCUlBI4EzYUNhITERMSEhITEBQSNxM3EjgTERISEhMRExISERQRExISEjgSOBMRERMRORI3EzcTNxETERMRORI3ExISAAYAlJQTNhI4EzYUERISEhMRExISEjgSNxM3EhISExETEhITEhETEhMRExI3EjgTERITETgSOBI3EzcSEhITETgTNxISEgANBQAAAAAAAA=='

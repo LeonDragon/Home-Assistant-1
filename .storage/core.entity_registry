@@ -1,0 +1,476 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "person.trinh_tien_thanh",
+                "name": null,
+                "platform": "person",
+                "unique_id": "30deab5dac5941fb9c5148aa1ecb4f5f"
+            },
+            {
+                "config_entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "device_id": "8851d04f7a614f67a1fd9e24b3accf73",
+                "disabled_by": null,
+                "entity_id": "media_player.living_room",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "ca94c8a1-9d0c-9805-06da-fd573faa544a"
+            },
+            {
+                "config_entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "device_id": "328491208909438cb8a234897b5c0644",
+                "disabled_by": null,
+                "entity_id": "media_player.bedroom",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "3adb4cde-a629-2dd9-47a9-563b534ea916"
+            },
+            {
+                "config_entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.home_speaker",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "3837009e-6e88-44e8-a038-429ce3fb9353"
+            },
+            {
+                "config_entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "device_id": "f4e1842284464f339e212d1ea3751858",
+                "disabled_by": null,
+                "entity_id": "media_player.android_tv",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "bd1171a2-329b-4c27-9f4e-ba598be63211"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.motion_sensor_158d0002732c91",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0002732c91"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.switch_158d00020fef2d",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d00020fef2d"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.motion_sensor_158d000275c945",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d000275c945"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.door_window_sensor_158d0001f369e9",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001f369e9"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.motion_sensor_158d00023db50c",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d00023db50c"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.wall_switch_left_158d000255ea52",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "channel_0158d000255ea52"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.switch_158d00020feeab",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d00020feeab"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.motion_sensor_158d0002760432",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0002760432"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.wall_switch_right_158d000255ea52",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "channel_1158d000255ea52"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.wall_switch_both_158d000255ea52",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "dual_channel158d000255ea52"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_7811dcdefc7f",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "illumination7811dcdefc7f"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_158d00023db50c",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "lux158d00023db50c"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_158d0002760432",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "lux158d0002760432"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_158d000275c945",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "lux158d000275c945"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_04cf8c91346e",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "illumination04cf8c91346e"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.illumination_158d0002732c91",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "lux158d0002732c91"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.temperature_158d0002f81e37",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "temperature158d0002f81e37"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.humidity_158d0002f81e37",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "humidity158d0002f81e37"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pressure_158d0002f81e37",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "pressure158d0002f81e37"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "light.gateway_light_04cf8c91346e",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "rgb04cf8c91346e"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "light.gateway_light_7811dcdefc7f",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "rgb7811dcdefc7f"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.power_strip",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "zimi.powerstrip.v2-7C:49:EB:8C:3C:F8"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.lg_ac",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "lg_ac"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.daikin_ac",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "daikin_ac"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.tivi",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "tivi"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.soundbar",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "soundbar"
+            },
+            {
+                "config_entry_id": "a1a6e636ef5a4a019904c53442f18dc3",
+                "device_id": "e53c2e48ae934ae19f8888086c39242c",
+                "disabled_by": null,
+                "entity_id": "sensor.anh_s_iphone_7_plus_battery_state",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "state_Anhs_iPhone"
+            },
+            {
+                "config_entry_id": "a1a6e636ef5a4a019904c53442f18dc3",
+                "device_id": "cb0d7da8a1ff493ba8e23a32407a65aa",
+                "disabled_by": null,
+                "entity_id": "sensor.trinhs_ipad_battery_level",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "level_trinhs_ipad"
+            },
+            {
+                "config_entry_id": "a1a6e636ef5a4a019904c53442f18dc3",
+                "device_id": "e53c2e48ae934ae19f8888086c39242c",
+                "disabled_by": null,
+                "entity_id": "sensor.anh_s_iphone_7_plus_battery_level",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "level_Anhs_iPhone"
+            },
+            {
+                "config_entry_id": "a1a6e636ef5a4a019904c53442f18dc3",
+                "device_id": "cb0d7da8a1ff493ba8e23a32407a65aa",
+                "disabled_by": null,
+                "entity_id": "sensor.trinhs_ipad_battery_state",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "state_trinhs_ipad"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "189780c2574b4090bb5de088fc349f29",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets_sent"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "c7f101413d6240f0a3617d6055e27288",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_packets_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets/sec_received"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "41f085c44ff24379916174f3529bd3c4",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets_received"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "38f8feef6eb0469089cf10933f1d297a",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_packets_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets/sec_sent"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "c885a528a88c43b4af120a0f37594779",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_bytes_sent"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "61667aa6f5524567a186ded151fc6e25",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_kbyte_sec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "58383dfb1cc84bcba6f29cc8f3eceef0",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_bytes_received"
+            },
+            {
+                "config_entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "device_id": "5938eea5acf9492a83157f163a99881a",
+                "disabled_by": null,
+                "entity_id": "sensor.miwifi_router_kbyte_sec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.mi_plug_2",
+                "name": null,
+                "platform": "xiaomi_miio",
+                "unique_id": "chuangmi.plug.m1-7C:49:EB:23:09:DE"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.samsung_5_series_49_ua49k5500",
+                "name": null,
+                "platform": "samsungtv",
+                "unique_id": "eb178002-11aa-486d-b433-0729a8bff4e1"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "person.anh",
+                "name": null,
+                "platform": "person",
+                "unique_id": "53e363a1e6b542e9b301e392df6f3216"
+            },
+            {
+                "config_entry_id": "31d2db38b606463c98c9818735300fd8",
+                "device_id": "9747652d7a2c451cb30afdc21b885b15",
+                "disabled_by": null,
+                "entity_id": "device_tracker.thanhtt_mi9",
+                "name": null,
+                "platform": "owntracks",
+                "unique_id": "thanhtt_mi9"
+            },
+            {
+                "config_entry_id": "31d2db38b606463c98c9818735300fd8",
+                "device_id": "c2dcad10d3c54737be7adc58102ca06a",
+                "disabled_by": null,
+                "entity_id": "device_tracker.thanhtt_ipad",
+                "name": "iPad",
+                "platform": "owntracks",
+                "unique_id": "thanhtt_ipad"
+            },
+            {
+                "config_entry_id": "31d2db38b606463c98c9818735300fd8",
+                "device_id": "cf17645666664d2b94ef87a994e69fac",
+                "disabled_by": null,
+                "entity_id": "device_tracker.thanhtt_anhs_iphone_7_plus",
+                "name": "\u00c1nh",
+                "platform": "owntracks",
+                "unique_id": "thanhtt_anhs_iphone_7_plus"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.updater",
+                "name": null,
+                "platform": "updater",
+                "unique_id": "updater"
+            },
+            {
+                "config_entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.home_speaker_2",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "1f44db70-d059-4365-b4b8-2984b2a22576"
+            },
+            {
+                "config_entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.home_speaker_3",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "3bb894d2-34a6-4b5d-9f85-56b6dbc503af"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

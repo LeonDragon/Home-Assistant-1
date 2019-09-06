@@ -1,0 +1,16 @@
+{
+    "data": {
+        "config": {
+            "title": "Trinh's Home",
+            "views": [
+                {
+                    "badges": [
+                        "binary_sensor.trinh_s_mi9"
+                    ]
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

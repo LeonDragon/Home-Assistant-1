@@ -1,0 +1,245 @@
+#Media Players:
+media_player.soundbar:
+  friendly_name: Living Room Soundbar
+  icon: mdi:speaker
+media_player.tivi:
+  friendly_name: Living Room TV
+  icon: mdi:television
+media_player.living_room:
+  friendly_name: Living Room Speaker
+  icon: mdi:speaker
+media_player.bedroom:
+  friendly_name: Bedroom Speaker
+  icon: mdi:speaker
+script.mute:
+  friendly_name: Mute
+  icon: mdi:volume-off
+switch.mute:
+  friendly_name: Mute
+  icon: mdi:volume-off
+script.volume_down:
+  friendly_name: Volume down
+  icon: mdi:volume-minus
+script.volume_up:
+  friendly_name: Volume up
+  icon: mdi:volume-plus
+media_player.android_tv:
+  friendly_name: Android TV
+  icon: mdi:cast
+device_tracker.thanhtt_mi9:
+  friendly_name: Thành
+  entity_picture: '"/local/Pics/Trinh.jpg"'
+person.trinh_tien_thanh:
+  entity_picture: '"/local/Pics/Trinh.jpg"'
+person.anh:
+  entity_picture: '"/local/Pics/Anh.jpg"'
+
+#
+#Lights
+light.bedside_lamp:
+  friendly_name: Bedside Lamp
+  icon: mdi:lamp
+light.desk_lamp:
+  friendly_name: Desk Lamp
+  icon: mdi:desk-lamp
+light.gateway_light_7811dcdefc7f:
+  friendly_name: Bedroom Gateway
+  icon: mdi:alarm-light-outline
+light.gateway_light_04cf8c91346e:
+  friendly_name: Living Room Gateway
+  icon: mdi:alarm-light-outline
+light.living_room_lights:
+  name: "Living Room Lights"
+  icon: mdi:alarm-light-outline
+light.bedroom_lights:
+  name: "Bedoom Lights"
+  icon: mdi:alarm-light-outline
+#
+#Switchs:
+switch.power_strip:
+  friendly_name: Power Strip
+  icon: mdi:power
+switch.living_room_ceiling_light:
+  friendly_name: Living Room Ceiling Light
+  icon: mdi:ceiling-light
+switch.living_room_wall_light_1:
+  friendly_name: Living Room Wall Light 1
+  icon: mdi:wall-sconce-flat
+switch.living_room_led_light:
+  friendly_name: Living Room Led Light
+  icon: mdi:led-strip
+switch.bedroom_ceiling_light:
+  friendly_name: Bedroom Ceiling Light
+  icon: mdi:ceiling-light
+switch.bedroom_wall_light_1:
+  friendly_name: Bedroom Wall Light 1
+  icon: mdi:wall-sconce-flat
+switch.bedroom_wall_light_2:
+  friendly_name: Bedroom Wall Light 2
+  icon: mdi:wall-sconce-flat
+switch.bedroom_led_light:
+  friendly_name: Bedroom Led Light
+  icon: mdi:led-strip
+switch.bedroom_all_light:
+  friendly_name: Bedroom All Light
+  icon: mdi:alarm-light-outline
+switch.balcony_light_s:
+  friendly_name: Balcony Light (s)
+  icon: mdi:lightbulb-outline
+switch.gate_light:
+  friendly_name: Gate Light
+  icon: mdi:octagram-outline
+switch.balcony_light:
+  friendly_name: Balcony Light
+  icon: mdi:octagram-outline
+switch.gate_light_s:
+  friendly_name: Gate Light (s)
+  icon: mdi:lightbulb-outline
+binary_sensor.switch_158d00020feeab:
+  friendly_name: Fan Switch
+binary_sensor.switch_158d00020fef2d:
+  friendly_name: Gate Ringbell
+binary_sensor.wall_switch_both_158d000255ea52:
+  friendly_name: Wall Switch Both
+binary_sensor.wall_switch_left_158d000255ea52:
+  friendly_name: Wall Switch Left
+binary_sensor.wall_switch_right_158d000255ea52:
+  friendly_name: Wall Switch Right
+switch.mp1_fan:
+  friendly_name: MP1 Fan
+  icon: mdi:power
+switch.mp1_tivi:
+  friendly_name: MP1 Tivi
+  icon: mdi:power
+switch.mp1_soundbar:
+  friendly_name: MP1 Soundbar
+  icon: mdi:power
+switch.mp1_mibox:
+  friendly_name: MP1 Mibox
+  icon: mdi:power
+#
+#Climate
+climate.daikin_ac:
+  friendly_name: Daikin AC
+  icon: mdi:air-conditioner
+climate.lg_ac:
+  friendly_name: LG AC
+  icon: mdi:air-conditioner
+#
+#Mitsubishi Fans
+fan.living_room_fan:
+  friendly_name: Living Room Fan
+  icon: mdi:fan
+switch.mitsubishi_fan_natural_mode:
+  friendly_name: Mitsubishi Fan Natural Mode
+  icon: mdi:nativescript
+switch.mitsubishi_fan_swing:
+  friendly_name: Mitsubishi Fan Swing
+  icon: mdi:rotate-3d
+#
+#hitachi Fans
+fan.bedroom_fan:
+  friendly_name: Bedroom Fan
+  icon: mdi:fan
+switch.hitachi_fan_natural_mode:
+  friendly_name: Hitachi Fan Natural Mode
+  icon: mdi:nativescript
+script.hitachi_fan_speed_down:
+  friendly_name: Hitachi Fan Speed Down
+  icon: mdi:minus-circle
+script.hitachi_fan_speed_up:
+  friendly_name: Hitachi Fan Speed Up
+  icon: mdi:plus-circle
+switch.hitachi_fan_swing:
+  friendly_name: Hitachi Fan Swing
+  icon: mdi:rotate-3d
+switch.hitachi_fan_night_mode:
+  friendly_name: Hitachi Fan Night Mode
+  icon: mdi:weather-night
+switch.hitachi_fan_night_mode_10h:
+  friendly_name: Hitachi Fan Night Mode 10h
+  icon: mdi:brightness-3
+
+#
+#Xiaomi Fan
+fan.xiaomi_smart_fan:
+  friendly_name: Smart Fan
+  icon: mdi:fan
+script.xiaomi_fan_oscillate_off:
+  friendly_name: Swing Off
+  icon: mdi:lock-reset
+script.xiaomi_fan_set_direction_left:
+  friendly_name: Xiaomi Fan Set Direction Left
+  icon: mdi:rotate-left
+script.xiaomi_fan_set_direction_right:
+  friendly_name: Xiaomi Fan Set Direction Right
+  icon: mdi:rotate-right
+script.xiaomi_fan_set_natural_mode_on:
+  friendly_name: Xiaomi Fan Natural Mode
+  icon: mdi:nativescript
+script.xiaomi_fan_set_natural_mode_off:
+  friendly_name: Xiaomi Fan Standard Mode
+  icon: mdi:standard-definition
+#
+#Sensors:
+binary_sensor.door_window_sensor_158d0001f369e9:
+  friendly_name: Cổng chính
+  icon: mdi:door
+sensor.dark_sky_apparent_temperature:
+  friendly_name: Nhiệt độ cảm nhận
+sensor.dark_sky_humidity:
+  friendly_name: Độ ẩm
+sensor.dark_sky_icon:
+  hidden: true
+sensor.dark_sky_nearest_storm_distance:
+  friendly_name: Cơn bão gần nhất
+sensor.dark_sky_pressure:
+  friendly_name: Áp suất
+sensor.dark_sky_summary:
+  hidden: true
+sensor.dark_sky_temperature:
+  friendly_name: Nhiệt độ
+sensor.dark_sky_uv_index:
+  friendly_name: Chỉ số UV
+sensor.date:
+  friendly_name: Ngày
+sensor.time:
+  friendly_name: Thời gian
+sensor.swap_use_percent:
+  hidden: true
+binary_sensor.motion_sensor_158d00023db50c:
+  friendly_name: Phòng khách
+binary_sensor.motion_sensor_158d0002732c91:
+  friendly_name: Phòng ngủ phụ
+binary_sensor.motion_sensor_158d000275c945:
+  friendly_name: Phòng ngủ chính
+binary_sensor.motion_sensor_158d0002760432:
+  friendly_name: Nhà bếp
+sensor.illumination_158d00023db50c:
+  friendly_name: Cường độ Ánh sáng Phòng khách
+sensor.illumination_158d0002732c91:
+  friendly_name: Cường độ Ánh sáng Phòng ngủ phụ
+sensor.illumination_158d000275c945:
+  friendly_name: Cường độ Ánh sáng Phòng ngủ
+sensor.illumination_158d0002760432:
+  friendly_name: Cường độ Ánh sáng Nhà bếp
+sensor.illumination_7811dcdefc7f:
+  friendly_name: Illumination Gateway
+sensor.humidity_158d0002f81e37:
+  friendly_name: Độ ẩm Phòng ngủ
+sensor.pressure_158d0002f81e37:
+  friendly_name: Áp suất Phòng ngủ
+sensor.temperature_158d0002f81e37:
+  friendly_name: Nhiệt độ Phòng ngủ
+sensor.living_room_temp_humidity:
+  friendly_name: Độ ẩm Phòng khách
+sensor.living_room_temp_temperature:
+  friendly_name: Nhiệt độ Phòng khách
+binary_sensor.0x00158d00023db50c_occupancy:
+  friendly_name: Phòng khách
+binary_sensor.0x00158d0002732c91_occupancy:
+  friendly_name: Phòng ngủ phụ
+binary_sensor.0x00158d000275c945_occupancy:
+  friendly_name: Phòng ngủ chính
+binary_sensor.0x00158d0002760432_occupancy:
+  friendly_name: Nhà bếp

@@ -1,0 +1,7 @@
+title: Camera
+icon: mdi:cctv
+path: camera
+badges:
+cards:
+  - type: custom:camera-card
+    entity: camera.living_room_camera

@@ -1,0 +1,614 @@
+- id: auto_start_duckdns
+  alias: Auto start duckdns
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - delay: 00:05:00
+  - service: hassio.addon_start
+    data:
+      addon: core_duckdns
+- id: set_theme_when_hass_start
+  alias: Set theme when hass start
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - service: frontend.set_theme
+    data:
+      name: homekit-light
+- id: start_homekit
+  alias: Start HomeKit
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - delay: 00:05
+  - service: homekit.start
+
+- id: ifttt_webhook_received
+  alias: Ifttt webhook received
+  trigger:
+  - event_data:
+      action: call_service
+    event_type: ifttt_webhook_received
+    platform: event
+  condition: []
+  action:
+    service_template: '{{ trigger.event.data.service }}'
+    data_template:
+      entity_id: '{{ trigger.event.data.entity_id }}'
+- id: auto_start_duckdns
+  alias: Auto update location when hass start
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - service: notify.ios_anhs_iphone
+    data:
+      message: request_location_update
+  - service: notify.ios_trinhs_ipad
+    data:
+      message: request_location_update
+
+- id: 'restart_hass_if_gateway_unavailable'
+  alias: Restart Hass If Gateway unavailable
+  trigger:
+  - entity_id: light.gateway_light_7811dcdefc7f
+    for: 00:05:00
+    platform: state
+    to: unavailable
+  condition: []
+  action:
+  - service: homeassistant.restart
+
+- id: play_ringtone_when_gate_open
+  alias: Play ringtone when gate open
+  trigger:
+  - entity_id: binary_sensor.door_window_sensor_158d0001f369e9
+    from: 'off'
+    platform: state
+    to: 'on'
+  action:
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: 04:CF:8C:91:34:6E
+      ringtone_id: 10
+      ringtone_vol: 100
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: 78:11:DC:DE:FC:7F
+      ringtone_id: 10
+      ringtone_vol: 100
+  - service: notify.telegram_message
+    data:
+      title: '*[CỔNG VỪA ĐƯỢC MỞ RA]*'
+      message: 'Thời gian: {{ states(''sensor.time'') }} ngày {{ states(''sensor.date'')
+        }}.'
+- id: sent_notification_when_gate_close
+  alias: Sent notification when gate close
+  trigger:
+  - entity_id: binary_sensor.door_window_sensor_158d0001f369e9
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - service: notify.telegram_message
+    data:
+      title: '*[CỔNG VỪA ĐƯỢC ĐÓNG LẠI]*'
+      message: 'Thời gian: {{ states(''sensor.time'') }} ngày {{ states(''sensor.date'')
+        }}.'
+- id: turn_on_gate_light_when_gate_open
+  alias: Turn on gate light when gate open
+  trigger:
+  - entity_id: binary_sensor.door_window_sensor_158d0001f369e9
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: switch.turn_on
+    entity_id: switch.gate_light
+- id: turn_off_gate_light_when_gate_close
+  alias: Turn off gate light when gate close
+  trigger:
+  - entity_id: binary_sensor.door_window_sensor_158d0001f369e9
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.gate_light
+    state: 'on'
+  action:
+  - delay: 00:00:30
+  - service: switch.turn_off
+    entity_id: switch.gate_light
+- id: play_ringtone_when_click_gate_switch
+  alias: Play ringtone when click gate switch
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d00020fef2d
+      click_type: single
+  condition: []
+  action:
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: 04:CF:8C:91:34:6E
+      ringtone_id: 10
+      ringtone_vol: 100
+  - service: xiaomi_aqara.play_ringtone
+    data:
+      gw_mac: 78:11:DC:DE:FC:7F
+      ringtone_id: 10
+      ringtone_vol: 100
+  - service: notify.telegram_message
+    data:
+      title: '*[CÓ NGƯỜI BẤM CHUÔNG CỔNG]*'
+      message: 'Thời gian: {{ states(''sensor.time'') }} ngày {{ states(''sensor.date'')
+        }}.'
+- id: living_room_fan_toggle
+  alias: Living room fan toggle
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d00020feeab
+      click_type: single
+  condition: []
+  action:
+  - service: fan.toggle
+    entity_id: fan.living_room_fan
+- id: auto_turn_off_bslamp_when_hass_start
+  alias: Auto turn off bslamp when hass start
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: above_horizon
+  - condition: state
+    entity_id: light.bedside_lamp
+    state: 'on'
+  action:
+  - service: light.turn_off
+    entity_id: light.bedside_lamp
+  - service: notify.telegram_message
+    data:
+      title: '*[Thông báo Hệ thống]*'
+      message: Đèn ngủ đã tắt sau khi Hass khởi động.
+- id: auto_turn_off_yeelight_when_hass_start
+  alias: Auto turn off yeelight when hass start
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition:
+  - condition: state
+    entity_id: light.desk_lamp
+    state: 'on'
+  action:
+  - service: light.turn_off
+    entity_id: light.desk_lamp
+  - service: notify.telegram_message
+    data:
+      title: '*[Thông báo Hệ thống]*'
+      message: Đèn bàn đã tắt sau khi Hass khởi động.
+- id: turn_off_hitachi_fan_night_mode
+  alias: Turn Off Hitachi Night Mode
+  trigger:
+  - entity_id: switch.hitachi_fan_night_mode
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBIAAABKpQUERM3ExEUERMSExETExI3EzcTERQRExEUERM3ExITERQ2FDYUNhQREzcVDxQRExITERQRExEUNhQREzcTNxU1FQANBQ==
+- id: turn_on_hitachi_fan_night_mode_10h
+  alias: Turn On Hitachi Night Mode 10h
+  trigger:
+  - entity_id: switch.hitachi_fan_night_mode_10h
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - service: broadlink.send
+    data:
+      host: 192.168.10.144
+      packet:
+      - JgBIAAABKpQUERM3ExEUERMSExETExI3EzcTERQRExEUERM3ExITERQ2FDYUNhQREzcVDxQRExITERQRExEUNhQREzcTNxU1FQANBQ==
+- id: turn_off_hitachi_fan_night_mode_10h_when_fan_off
+  alias: Turn Off Hitachi Fan Night Mode 10h when fan off
+  trigger:
+  - entity_id: fan.bedroom_fan
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.hitachi_fan_night_mode_10h
+    state: 'on'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.hitachi_fan_night_mode_10h
+- id: turn_off_hitachi_fan_night_mode_when_fan_off
+  alias: Turn Off Hitachi Fan Night Mode when fan off
+  trigger:
+  - entity_id: fan.bedroom_fan
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.hitachi_fan_night_mode
+    state: 'on'
+  action:
+  - service: switch.turn_off
+    entity_id: switch.hitachi_fan_night_mode
+- id: hitachi_fan_set_speed
+  alias: Hitachi Fan Set Speed
+  trigger:
+  - entity_id: input_select.hitachi_fan_speed
+    platform: state
+  condition:
+  - condition: state
+    entity_id: fan.bedroom_fan
+    state: 'on'
+  action:
+  - service_template: "{% if is_state('input_select.hitachi_fan_speed', '1') %}\n\
+      \  script.hitachi_fan_1\n{% elif is_state('input_select.hitachi_fan_speed',\
+      \ '2') %}\n  script.hitachi_fan_2\n{% elif is_state('input_select.hitachi_fan_speed',\
+      \ '3') %}\n  script.hitachi_fan_3\n{% elif is_state('input_select.hitachi_fan_speed',\
+      \ '4') %}\n  script.hitachi_fan_4\n{% endif %}\n"
+- id: turn_off_bedside_lamp_when_sunrise
+  alias: turn off bedside lamp when sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  condition:
+  - condition: state
+    entity_id: light.bedside_lamp
+    state: 'on'
+  action:
+  - service: light.turn_off
+    entity_id: light.bedside_lamp
+- id: daikin_ac_set_timer
+  alias: Daikin AC Set Timer
+  trigger:
+  - entity_id: input_boolean.daikin_ac_timer
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: template
+    value_template: '{{ not is_state(''climate.daikin_ac'', ''off'') }}'
+  action:
+  - service: notify.telegram_message
+    data:
+      title: '*[ĐÃ BẬT HẸN GIỜ ĐIỀU HÒA DAIKIN]*'
+      message: Điều hòa Daikin sẽ tắt sau {{ states('input_number.daikin_ac_select_timer')|int
+        }} giờ.
+  - delay:
+      hours: '{{ states(''input_number.daikin_ac_select_timer'')|int }}'
+  - service: climate.turn_off
+    entity_id: climate.daikin_ac
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.daikin_ac_timer
+  - service: notify.telegram_message
+    data:
+      title: '*[ĐIỀU HÒA DAIKIN ĐÃ TẮT]*'
+      message: 'Thời gian: {{ states(''sensor.time'') }} ngày {{ states(''sensor.date'')
+        }}.'
+- id: daikin_ac_set_fan_speed
+  alias: Daikin AC Set Fan Speed
+  trigger:
+  - entity_id: input_select.daikin_ac_fan_mode
+    platform: state
+  condition:
+  - condition: template
+    value_template: '{{ not is_state(''climate.daikin_ac'', ''off'') }}'
+  action:
+  - service: climate.set_fan_mode
+    data_template:
+      entity_id: climate.daikin_ac
+      fan_mode: '{{ states(''input_select.daikin_ac_fan_mode'') }}'
+- alias: Set Mode when turn on Daikin AC
+  trigger:
+  - entity_id: climate.daikin_ac
+    from: 'off'
+    platform: state
+    to: cool
+  condition: []
+  action:
+  - delay:
+      seconds: 5
+  - service: climate.set_temperature
+    data:
+      entity_id: climate.daikin_ac
+      temperature: 24
+  - delay:
+      seconds: 5
+  - service: climate.set_fan_mode
+    data:
+      entity_id: climate.daikin_ac
+      fan_mode: high
+  - service: tts.google_say
+    entity_id: media_player.bedroom
+    data:
+      message: Nhiệt độ Máy lạnh được thiết lập mức 24 độ xê,    quạt gió ở mức cao.
+      cache: false
+  id: 8bd49c9f30284eacac98a49204a5e32a
+- alias: Click Righ button to turn on Daikin AC
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_right_158d000255ea52
+      click_type: single
+  condition:
+  - condition: state
+    entity_id: climate.daikin_ac
+    state: 'off'
+  action:
+  - service: climate.turn_on
+    entity_id: climate.daikin_ac
+  id: b0d5e6d5f2cc4dca94fc870b3d86ffb8
+- alias: Click Righ button to turn off Daikin AC
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_right_158d000255ea52
+      click_type: single
+  condition:
+  - condition: template
+    value_template: '{{ not is_state(''climate.daikin_ac'', ''off'') }}'
+  action:
+  - service: climate.turn_off
+    entity_id: climate.daikin_ac
+  id: 619d42ce044c4b2a83f4515b915a5c03
+- alias: Turn off Daikin AC When Sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  condition:
+  - condition: template
+    value_template: '{{ not is_state(''climate.daikin_ac'', ''off'') }}'
+  action:
+  - service: climate.turn_off
+    entity_id: climate.daikin_ac
+  id: 4aa0151423044a58a6d926b120d48ff2
+- alias: Click Left button to toggle Bedroom Fan
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_left_158d000255ea52
+      click_type: single
+  condition: []
+  action:
+  - service: fan.toggle
+    entity_id: fan.bedroom_fan
+  id: 5bf4b90326494600b8358e8bef186f10
+- alias: Click both button to set Sleeping
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.wall_switch_both_158d000255ea52
+      click_type: both
+  condition: []
+  action:
+  - service: script.turn_on
+    entity_id: script.i_go_to_bed
+  id: 6b7bd20ff7f14c55a1c7748cdc4b34a0
+- id: notify_6_30_AM
+  alias: Notify 6h30 AM
+  trigger:
+  - at: 06:29:20
+    platform: time
+  condition: []
+  action:
+  - service: media_player.play_media
+    entity_id: media_player.living_room, media_player.bedroom
+    data:
+      media_content_id: https://thanhtt.duckdns.org/local/Music/theducbuoisang.mp3
+      media_content_type: audio/mp3
+  - delay: 00:00:40
+  - service: tts.google_say
+    entity_id: media_player.living_room
+    data_template:
+      message: ' Xin thông báo, bây giờ là 6 giờ 30 mươi phút sáng'
+  - delay: 00:00:10
+  - service: script.turn_on
+    entity_id: script.weather_today
+- id: notify_daily
+  alias: Notify Daily
+  trigger:
+    platform: time_pattern
+    minutes: 0
+  condition:
+    condition: or
+    conditions:
+    - condition: time
+      after: '06:59:00'
+      before: '12:01:00'
+    - condition: time
+      after: '13:59:00'
+      before: '21:01:00'
+  action:
+  - service: media_player.play_media
+    entity_id: media_player.living_room
+    data:
+      media_content_id: https://thanhtt.duckdns.org/local/Music/ring.mp3
+      media_content_type: audio/mp3
+  - delay: 00:00:10
+  - service: tts.google_say
+    entity_id: media_player.living_room
+    data_template:
+      message: ' Xin thông báo, bây giờ là {{ now().hour }} giờ'
+
+- id: auto_turn_on_living_room_light_when_get_home
+  alias: Auto turn on living room light when get home
+  trigger:
+  - entity_id: device_tracker.thanhtt_mi9, device_tracker.anhs_iphone
+    from: not_home
+    platform: state
+    to: home
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: switch.turn_on
+    entity_id: switch.living_room_ceiling_light
+- id: notify_anh_location_enter
+  alias: Notify Anh Location Enter
+  trigger:
+    platform: state
+    entity_id: device_tracker.anhs_iphone, device_tracker.thanhtt_anhs_iphone_7_plus
+    from: not_home
+  action:
+  - service: notify.telegram_message
+    data_template:
+      title: '*[ÁNH just came {{ trigger.to_state.state }}]*'
+      message: 'Time: {{ states(''sensor.time'') }} date: {{ states(''sensor.date'')
+        }}.'
+- id: notify_anh_location_leave
+  alias: Notify Anh Location Leave
+  trigger:
+    platform: state
+    entity_id: device_tracker.anhs_iphone, device_tracker.thanhtt_anhs_iphone_7_plus
+    to: not_home
+  action:
+  - service: notify.telegram_message
+    data_template:
+      title: '*[ÁNH just left {{ trigger.from_state.state }}]*'
+      message: 'Time: {{ states(''sensor.time'') }} date: {{ states(''sensor.date'')
+        }}.'
+- alias: Security notify
+  trigger:
+  - platform: state
+    entity_id: alarm_control_panel.home_alarm
+  action:
+  - service: notify.telegram_message
+    data_template:
+      title: '*[SECURITY ACTIVATED]*'
+      message: ALARM! The alarm is armed in {{ trigger.to_state.state }} at {{ states('sensor.time')
+        }} on {{ states('sensor.date') }}
+
+- id: trigger_alarm_while_away_mode
+  alias: Trigger alarm while Away mode
+  trigger:
+  - entity_id: binary_sensor.door_window_sensor_158d0001f369e9
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: binary_sensor.motion_sensor_158d00023db50c
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: binary_sensor.motion_sensor_158d0002760432
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: device_tracker.thanhtt_mi9
+      state: not_home
+    - condition: state
+      entity_id: alarm_control_panel.home_alarm
+      state: armed_away
+  action:
+  - service: media_player.play_media
+    entity_id: media_player.living_room, media_player.bedroom
+    data:
+      media_content_id: https://thanhtt.duckdns.org/local/Music/alarm.mp3
+      media_content_type: audio/mp3
+  - service: notify.telegram_message
+    data:
+      title: '*[THÔNG BÁO AN NINH]*'
+      message: Phát hiện bất thường tại nhà vào lúc {{ states('sensor.time') }} ngày
+        {{ states('sensor.date') }}.
+- id: trigger_alarm_while_night_mode
+  alias: Trigger alarm while Night mode
+  trigger:
+  - entity_id: binary_sensor.door_window_sensor_158d0001f369e9
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: binary_sensor.motion_sensor_158d00023db50c
+    from: 'off'
+    platform: state
+    to: 'on'
+  - entity_id: binary_sensor.motion_sensor_158d0002760432
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition:
+  - condition: state
+    entity_id: alarm_control_panel.home_alarm
+    state: arm_night
+  action:
+  - service: media_player.play_media
+    entity_id: media_player.living_room, media_player.bedroom
+    data:
+      media_content_id: https://thanhtt.duckdns.org/local/Music/alarm.mp3
+      media_content_type: audio/mp3
+- id: sign_gate_light
+  alias: Sign Gate Light
+  trigger:
+  - platform: state
+    entity_id: switch.gate_light, switch.gate_light_s
+  condition: []
+  action:
+  - delay:
+      milliseconds: 5
+  - service_template: switch.turn_{{trigger.to_state.state}}
+    data:
+      entity_id:
+      - switch.gate_light
+      - switch.gate_light_s
+- id: sign_balcony_light
+  alias: Sign Balcony Light
+  trigger:
+  - platform: state
+    entity_id: switch.balcony_light, switch.balcony_light_s
+  condition: []
+  action:
+  - delay:
+      milliseconds: 5
+  - service_template: switch.turn_{{trigger.to_state.state}}
+    data:
+      entity_id:
+      - switch.balcony_light
+      - switch.balcony_light_s
+- id: sign_bedroom_all_lights
+  alias: Sign Bedroom All Lights
+  trigger:
+  - platform: state
+    entity_id: switch.bedroom_all_light
+  condition: []
+  action:
+  - service_template: switch.turn_{{trigger.to_state.state}}
+    data:
+      entity_id:
+      - switch.bedroom_ceiling_light
+      - switch.bedroom_wall_light_1
+      - switch.bedroom_wall_light_2

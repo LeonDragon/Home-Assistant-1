@@ -1,0 +1,271 @@
+title: Home Condition
+icon: mdi:home-heart
+path: home-condition
+
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Quick Access'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Home
+              - icon: home
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Climate
+              - icon: thermostat
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Weather
+              - icon: weather-cloudy
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/weather
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/weather
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+
+  ### Condition Room ###
+  - type: vertical-stack
+    cards:
+      # Living Room
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '#### Living Room Condition'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:mini-graph-card
+            style: |
+              ha-card {
+                border-radius: var(--card-border-radius);
+                background: var(--background-card);
+                --label-badge-text-color: var(--label-color-off);
+                color: var(--primary-text-color);
+                opacity: 0.8;
+              }
+            entities:
+              - sensor.living_room_temp_temperature
+            line_color: red
+            line_width: 10
+            font_size: 68
+            name: Temprature
+            show:
+              extrema: true
+              name: false
+            color_thresholds:
+              - value: 18
+                color: "#73f5ea"
+              - value: 20
+                color: "#73f598"
+              - value: 22
+                color: "#abf573"
+              - value: 24
+                color: "#dff573"
+              - value: 26
+                color: "#f5f573"
+              - value: 28
+                color: "#f23913"
+              - value: 30
+                color: "#f58973"
+              - value: 32
+                color: "#d61a1a"
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:mini-graph-card
+            style: |
+              ha-card {
+                border-radius: var(--card-border-radius);
+                background: var(--background-card);
+                --label-badge-text-color: var(--label-color-off);
+                color: var(--primary-text-color);
+                opacity: 0.8;
+              }
+            entities:
+              - sensor.living_room_temp_humidity
+            line_color: blue
+            line_width: 10
+            font_size: 68
+            name: Living Room
+            show:
+              extrema: true
+              name: false
+            color_thresholds:
+              - value: 40
+                color: "#CCE5FF"
+              - value: 50
+                color: "#66B2FF"
+              - value: 60
+                color: "#0080FF"
+              - value: 70
+                color: "#87c087"
+              - value: 80
+                color: "#389638"
+              - value: 90
+                color: "#FF9932"
+              - value: 94
+                color: "#FF8000"
+              - value: 98
+                color: "#ff0000"
+          - !include ../decluttering_templates/blank-card.yaml
+      # Bedroom
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '#### Master Bedroom Condition'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:mini-graph-card
+            style: |
+              ha-card {
+                border-radius: var(--card-border-radius);
+                background: var(--background-card);
+                --label-badge-text-color: var(--label-color-off);
+                color: var(--primary-text-color);
+                opacity: 0.8;
+              }
+            entities:
+              - sensor.temperature_158d0002f81e37
+            line_color: red
+            line_width: 10
+            font_size: 68
+            name: M.Bedroom
+            show:
+              extrema: true
+              name: false
+            color_thresholds:
+              - value: 18
+                color: "#73f5ea"
+              - value: 20
+                color: "#73f598"
+              - value: 22
+                color: "#abf573"
+              - value: 24
+                color: "#dff573"
+              - value: 26
+                color: "#f5f573"
+              - value: 28
+                color: "#f23913"
+              - value: 30
+                color: "#f58973"
+              - value: 32
+                color: "#d61a1a"
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:mini-graph-card
+            style: |
+              ha-card {
+                border-radius: var(--card-border-radius);
+                background: var(--background-card);
+                --label-badge-text-color: var(--label-color-off);
+                color: var(--primary-text-color);
+                opacity: 0.8;
+              }
+            entities:
+              - sensor.humidity_158d0002f81e37
+            line_color: blue
+            line_width: 10
+            font_size: 68
+            name: M.Bedroom
+            show:
+              extrema: true
+              name: false
+            color_thresholds:
+              - value: 40
+                color: "#CCE5FF"
+              - value: 50
+                color: "#66B2FF"
+              - value: 60
+                color: "#0080FF"
+              - value: 70
+                color: "#87c087"
+              - value: 80
+                color: "#389638"
+              - value: 90
+                color: "#FF9932"
+              - value: 94
+                color: "#FF8000"
+              - value: 98
+                color: "#ff0000"
+          - !include ../decluttering_templates/blank-card.yaml
+      # illumination
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:mini-graph-card
+            name: ILLUMINANCE
+            entities:
+              - entity: sensor.illumination_158d00023db50c
+                name: Living Room
+              - entity: sensor.illumination_158d000275c945
+                name: M.Bedroom
+              - entity: sensor.illumination_158d0002732c91
+                name: S.Bedroom
+              - entity: sensor.illumination_158d0002760432
+                name: Kitchen
+          - !include ../decluttering_templates/blank-card.yaml

@@ -1,0 +1,155 @@
+title: "Weather"
+icon: mdi:weather-cloudy
+path: weather
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Quick Access'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Home
+              - icon: home
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Home Condition
+              - icon: home-heart
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/home-condition
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/home-condition
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Climate
+              - icon: thermostat
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '## Weather'
+      - type: custom:swipe-card
+        parameters:
+          effect: 'coverflow'
+          grabCursor: true
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: custom:decluttering-card
+                template: header_text
+                variables:
+                  - content: '#### Overview >'
+              - !include ../decluttering_templates/blank-card.yaml
+              - type: horizontal-stack
+                cards:
+                  - !include ../decluttering_templates/blank-card.yaml
+                  - type: custom:weather-card-chart
+                    style: |
+                      ha-card {
+                        font-size: 12px;
+                        font-family: Helvetica;
+                        background: none;
+                        box-shadow: none;
+                        border-radius: var(--border-radius);
+                      }
+                    weather: weather.dark_sky
+                  - !include ../decluttering_templates/blank-card.yaml
+              - type: horizontal-stack
+                cards:
+                  - !include ../decluttering_templates/blank-card.yaml
+                  - type: custom:more-info-card
+                    style: |
+                      ha-card {
+                        font-size: 12px;
+                        font-family: Helvetica;
+                        background: none;
+                        box-shadow: none;
+                        border-radius: var(--border-radius);
+                      }
+                    entity: weather.dark_sky
+                  - !include ../decluttering_templates/blank-card.yaml
+          - type: vertical-stack
+            cards:
+              - type: custom:decluttering-card
+                template: header_text
+                variables:
+                  - content: '#### < Map'
+              - type: horizontal-stack
+                cards:
+                  - !include ../decluttering_templates/blank-card.yaml
+                  - type: iframe
+                    style: |
+                      ha-card {
+                        border-radius: var(--border-radius);
+                        overflow: hidden;
+                        box-shadow: none;
+                      }
+                    aspect_ratio: 155%
+                    url: https://embed.windy.com/embed2.html?lat=20.828&lon=106.660&zoom=11&level=surface&overlay=rain&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&detailLat=20.828&detailLon=106.660&metricWind=km%2Fh&metricTemp=%C2%B0C&radarRange=-1
+                  - !include ../decluttering_templates/blank-card.yaml

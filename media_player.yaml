@@ -1,0 +1,10 @@
+- platform: smartir
+  name: tivi
+  unique_id: tivi
+  device_code: 1060
+  controller_data: 192.168.10.141
+- platform: smartir
+  name: soundbar
+  unique_id: soundbar
+  device_code: 1080
+  controller_data: 192.168.10.141

@@ -1,0 +1,390 @@
+title: Trinh's Home
+icon: mdi:home-outline
+path: home
+badges:
+  - device_tracker.thanhtt_mi9
+  - device_tracker.anhs_iphone
+
+cards:
+  - type: vertical-stack
+    cards:
+      #### Date & Time
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '#### Time & Weather'
+      - type: markdown
+        style: |
+          ha-card {
+            border-radius: var(--card-border-radius);
+            background: var(--background-card);
+            opacity: 0.8;
+          }
+          h1 {
+            text-align: center;
+            font-size: 48px;
+          }
+          h2 {
+            text-align: center;
+            font-size: 16px;
+          }
+        content: |
+          # [[ sensor.time ]]
+          ## [[ sensor.date ]]
+
+        #### weather ####
+      #- type: horizontal-stack
+      #  cards:
+      #    - type: custom:weather-card
+      #      style: |
+      #        ha-card {
+      #          border-radius: var(--card-border-radius);
+      #          background: var(--background-card);
+      #          --label-badge-text-color: var(--label-color-off);
+      #          color: var(--primary-text-color);
+      #          opacity: 0.8;
+      #        }
+      #      entity: weather.dark_sky
+
+      - type: custom:simple-weather-card
+        entity: weather.dark_sky
+        name: "Home"
+        style: |
+          ha-card {
+            border-radius: var(--card-border-radius);
+            background: var(--background-card);
+            --label-badge-text-color: var(--label-color-off);
+            color: var(--primary-text-color);
+            opacity: 0.8;
+          }
+        backdrop: false
+
+      - type: 'custom:lunar-calendar'
+
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '### Main Menu'
+
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Lights
+              - label: All Lights
+              - icon: ceiling-light
+              - show_state: false
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Climate
+              - label: Control
+              - icon: thermostat
+              - show_state: false
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Media
+              - label: Entertainment
+              - icon: television
+              - show_state: false
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/media
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/media
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: alarm_control_panel.home_alarm
+              - name: Home Alarm
+              - label: Alarm Control Panel
+              - icon: shield-home
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/alarm
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/alarm
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Security
+              - label: Sensors
+              - icon: motion-sensor
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/security
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/security
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Weather
+              - label: Weather Forecast
+              - icon: weather-cloudy
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/weather
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/weather
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: System
+              - label: Home System
+              - icon: cellphone-arrow-down
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/system
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/system
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Maps
+              - label: Maps Detail
+              - icon: google-maps
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/maps
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/maps
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Unused Entities
+              - label: More
+              - icon: apps
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/hass-unused-entities
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/hass-unused-entities
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: About
+              - label: Hass Information
+              - icon: information
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /developer-tools/info
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /developer-tools/info
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Dashboard
+              - label: Hass Configure
+              - icon: cogs
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /config/dashboard
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /config/dashboard
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: State
+              - label: State Entities
+              - icon: alpha-s-box-outline
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /developer-tools/state
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /developer-tools/state
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+      ### Main Devices ###
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '#### Main Devices'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: script.i_am_home
+              - name: Home
+              - icon: home
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: script.i_am_leave
+              - name: Leaving
+              - icon: logout
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: media_player.tivi
+              - name: Tivi
+              - icon: television
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: media_player.soundbar
+              - name: Soundbar
+              - icon: speaker
+          - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: fan.living_room_fan
+              - name: Living Room
+              - icon: fan
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: fan.bedroom_fan
+              - name: Bedroom
+              - icon: fan
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: climate.daikin_ac
+              - name: Daikin AC
+              - icon: snowflake
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: script.i_go_to_bed
+              - name: Sleeping
+              - icon: power-sleep
+          - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.living_room_ceiling_light
+              - name: Living Room
+              - icon: ceiling-light
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.bedroom_ceiling_light
+              - name: Bedroom
+              - icon: ceiling-light
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.gate_light
+              - name: Gate Light
+              - icon: octagram-outline
+          #- !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.balcony_light
+              - name: Balcony Light
+              - icon: octagram-outline
+          - !include ../decluttering_templates/blank-card.yaml
+      - !include ../decluttering_templates/blank-card.yaml

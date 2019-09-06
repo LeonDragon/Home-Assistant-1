@@ -1,0 +1,25 @@
+hitachi_fan_speed:
+  name: Hitachi Fan Speed
+  options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+  icon: mdi:speedometer
+hitachi_fan_oscillating:
+  name: Hitachi Fan Oscillating
+  options:
+    - true
+    - false
+daikin_ac_fan_mode:
+  name: Set Fan Mode
+  options:
+    - auto
+    - night
+    - low
+    - lowMedium
+    - medium
+    - mediumHigh
+    - high
+    - powerful
+  icon: mdi:fan

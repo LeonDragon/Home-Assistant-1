@@ -1,0 +1,152 @@
+title: System
+icon: mdi:cellphone-arrow-down
+path: system
+badges:
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Quick Access'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Home
+              - icon: home
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Lights
+              - icon: ceiling-light
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Climate
+              - icon: thermostat
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.processor_use
+            severity:
+              green: 5
+              yellow: 10
+              red: 20
+          - type: gauge
+            entity: sensor.swap_use_percent
+            severity:
+              green: 5
+              yellow: 10
+              red: 20
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.disk_use_percent_home
+            severity:
+              green: 5
+              yellow: 10
+              red: 20
+          - type: gauge
+            entity: sensor.memory_use_percent
+            severity:
+              green: 5
+              yellow: 10
+              red: 20
+
+      - type: custom:hui-glance-card
+        title: Network
+        columns: 3
+        show_state: true
+        show_name: true
+        style:
+          left: 50%
+          top: 50%
+          width: 100%
+          --paper-card-background-color: rgba(0, 0, 0, 0.4)
+          --paper-item-icon-color: white
+          border-radius: 5px
+          color: rgb(0, 0, 0)
+        entities:
+          - entity: sensor.speedtest_ping
+            name: Ping
+          - entity: sensor.speedtest_download
+            name: Download
+          - entity: sensor.speedtest_upload
+            name: Upload
+      - type: entity-button
+        name: Update Location
+        icon: mdi:crosshairs-gps
+        tap_action:
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: script.update_location
+        entity: script.update_location
+  - type: custom:tracker-card

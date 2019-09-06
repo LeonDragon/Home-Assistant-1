@@ -1,0 +1,66 @@
+  - url: /customcards/custom-lovelace/card-tools.js
+    type: js
+  - url: https://unpkg.com/moment@2.22.2/moment.js
+    type: js
+  - url: https://fonts.googleapis.com/css?family=Roboto+Condensed
+    type: css
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/swipe-card/swipe-card.min.js
+    type: module
+  - url: https://cdn.jsdelivr.net/gh/bramkragten/custom-ui@master/weather-card/weather-card.min.js
+    type: module
+  - url: /customcards/custom-lovelace/camera-card.js
+    type: module
+  - url: /customcards/custom-lovelace/button-card.js
+    type: module
+  - url: /customcards/custom-lovelace/card-modder.js
+    type: js
+  - url: /customcards/custom-lovelace/compact-custom-header/compact-custom-header.js?v=0.0.1
+    type: module
+  - url: /customcards/custom-lovelace/mini-graph-card-bundle.js?v=0.5.0
+    type: module
+  - url: /customcards/custom-lovelace/mini-media-player-bundle.js
+    type: module
+  - url: /customcards/custom-lovelace/simple-weather-card.bundle.js?v=0.1.0
+    type: module
+  - url: /customcards/custom-lovelace/slider-entity-row.js
+    type: js
+  - url: /customcards/custom-lovelace/tracker-card.js
+    type: js
+  - url: /customcards/custom-lovelace/live-camera-card.js?v.0.0.3
+    type: module
+  - url: /customcards/github/nervetattoo/simple-thermostat.js?track=true
+    type: module
+  - url: /customcards/custom-lovelace/lunar_calendar.js?v=0.2.29
+    type: js
+  - url: /customcards/github/gadgetchnnel/lovelace-home-feed-card.js?track=true
+    type: js
+  - url: /customcards/custom-lovelace/secondaryinfo-entity-row.js
+    type: module
+  - url: /customcards/custom-lovelace/markdown-mod.js
+    type: module
+  - url: /customcards/github/gadgetchnnel/more-info-card.js
+    type: js
+  - url: /customcards/custom-lovelace/decluttering-card/decluttering-card.js
+    type: module
+  - url: /customcards/custom-lovelace/lovelace-state-switch/state-switch.js
+    type: js
+  - url: /customcards/custom-lovelace/lovelace-popup-card/popup-card.js
+    type: js
+  - url: /customcards/custom-lovelace/sun-card/sun-card.js
+    type: module
+  - url: /customcards/custom-lovelace/check-button-card/check-button-card.js
+    type: module
+  - url: /customcards/custom-lovelace/lovelace-card-mod/card-mod.js
+    type: module
+  - url: /customcards/custom-lovelace/light-entity-card/light-entity-card.js
+    type: js
+  - url: /customcards/custom-lovelace/lovelace-card-loader/card-loader.js
+    type: js
+  - url: /customcards/custom-lovelace/simple-weather-card/simple-weather-card-bundle.js?v=0.5.0
+    type: module
+  - url: /customcards/custom-lovelace/more-info-card/more-info-card.js
+    type: js
+  - url: /customcards/custom-lovelace/weather-card-chart/weather-card-chart.js
+    type: module
+  - url: /customcards/custom-lovelace/auto-entities/auto-entities.js
+    type: module

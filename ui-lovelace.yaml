@@ -1,0 +1,39 @@
+resources:
+  !include lovelace/resources/resources.yaml
+
+decluttering_templates:
+  !include lovelace/decluttering_templates/decluttering_templates.yaml
+
+cch:
+  hide_tabs: ""
+  options: ""
+  notifications: hide
+  voice: hide
+  options: hide
+  header: false
+  swipe: true
+  background: 'rgba(0,0,0,0.1)'
+  default_tab: 0
+  exceptions:
+    - conditions:
+        user: Home Assistant
+      config:
+        header: true
+
+title: Trinh's Home
+background: var(--background-image)
+views:
+#  - !include lovelace/views/main_menu.yaml
+  - !include lovelace/views/home.yaml
+  - !include lovelace/views/light.yaml
+  - !include lovelace/views/climate.yaml
+  - !include lovelace/views/media.yaml
+  - !include lovelace/views/currently_on.yaml
+  - !include lovelace/views/security.yaml
+  - !include lovelace/views/alarm.yaml
+#  - !include lovelace/views/camera.yaml
+  - !include lovelace/views/home-condition.yaml
+  - !include lovelace/views/weather.yaml
+  - !include lovelace/views/maps.yaml
+#  - !include lovelace/views/automations.yaml
+  - !include lovelace/views/system.yaml

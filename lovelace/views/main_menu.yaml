@@ -1,0 +1,234 @@
+title: Menu
+path: menu
+icon: mdi:menu
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: back_button_3
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '## Main Menu'
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### All Items'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Lights
+              - label: Lists
+              - icon: ceiling-light
+              - show_state: false
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Climate
+              - label: Control
+              - icon: thermostat
+              - show_state: false
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Media
+              - label: Entertainment
+              - icon: television
+              - show_state: false
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: alarm_control_panel.home_alarm
+              - name: Home Alarm
+              - label: Alarm Control Panel
+              - icon: shield-home
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/alarm
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/alarm
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Security
+              - label: Sensors
+              - icon: motion-sensor
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/security
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/security
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Weather
+              - label: Weather Forecast
+              - icon: weather-cloudy
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/weather
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/weather
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: System
+              - label: Home System
+              - icon: cellphone-arrow-down
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/system
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/system
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Maps
+              - label: Maps Detail
+              - icon: google-maps
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/maps
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/maps
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Unused Entities
+              - label: More
+              - icon: apps
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/hass-unused-entities
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/hass-unused-entities
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: About
+              - label: Hass Information
+              - icon: information
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /developer-tools/info
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /developer-tools/info
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Dashboard
+              - label: Hass Configure
+              - icon: cogs
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /config/dashboard
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /config/dashboard
+                  haptic: light
+          - type: custom:decluttering-card
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: State
+              - label: State Entities
+              - icon: alpha-s-box-outline
+              - show_state: true
+              - opacity: 0.8
+              - tap_action:
+                  action: navigate
+                  navigation_path: /developer-tools/state
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /developer-tools/state
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml

@@ -1,0 +1,9 @@
+#Mitsubishi Fan
+mitsubishi_fan_state:
+  name: "Mitsubishi Fan state"
+#Hitachi Fan
+hitachi_fan_state:
+  name: "Hitachi Fan state"
+#Daikin AC Timer
+daikin_ac_timer:
+  name: "Daikin AC Timer"

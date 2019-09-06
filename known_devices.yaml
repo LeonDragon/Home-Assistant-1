@@ -1,0 +1,24 @@
+
+anhs_iphone:
+  hide_if_away: false
+  icon: mdi:cellphone-iphone
+  mac: 6C:AB:31:3D:7F:59
+  name: Ánh
+  picture: /local/Pics/Anh.jpg
+  track: true
+
+trinhs_ipad:
+  hide_if_away: false
+  icon: mdi:tablet-ipad
+  mac: 24:A9:74:62:83:C9
+  name: Trinh’s iPad
+  picture: /local/Pics/iPad.png
+  track: true
+
+thanhtt_mi9:
+  hide_if_away: false
+  icon: mdi:cellphone-iphone
+  mac: a8:9c:ed:c2:11:1a
+  name: Thành
+  picture: /local/Pics/Trinh.jpg
+  track: true

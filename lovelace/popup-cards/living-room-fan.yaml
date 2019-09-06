@@ -1,0 +1,76 @@
+# Living Room Fan Popup Card
+  fan.living_room_fan:
+    title: Living Room Fan
+    style:
+      border-radius: var(--border-radius)
+      background: var(--background-image)
+    card:
+      type: vertical-stack
+      cards:
+        - type: horizontal-stack
+          cards:
+            - !include ../decluttering_templates/blank-card.yaml
+            - type: custom:decluttering-card
+              template: switch_button_card
+              variables:
+                - entity: script.mitsubishi_fan_speed
+                - name: Speed
+                - label: ""
+                - icon: speedometer
+                - show_state: false
+                - opacity: 0.8
+                - margin-left: 20px
+                - tap_action:
+                    action: toggle
+                - hold_action:
+                    action: more-info
+                    haptic: light
+            - !include ../decluttering_templates/blank-card.yaml
+            - type: custom:decluttering-card
+              template: switch_button_card
+              variables:
+                - entity: switch.mitsubishi_fan_swing
+                - name: Oscillation
+                - label: ""
+                - icon: autorenew
+                - show_state: false
+                - opacity: 0.8
+                - margin-left: 20px
+                - tap_action:
+                    action: toggle
+                - hold_action:
+                    action: more-info
+                    haptic: light
+            - !include ../decluttering_templates/blank-card.yaml
+            - type: custom:decluttering-card
+              template: switch_button_card
+              variables:
+                - entity: switch.mitsubishi_fan_natural_mode
+                - name: Mode
+                - label: ""
+                - icon: nativescript
+                - show_state: false
+                - opacity: 0.8
+                - margin-left: 20px
+                - tap_action:
+                    action: toggle
+                - hold_action:
+                    action: more-info
+                    haptic: light
+            - !include ../decluttering_templates/blank-card.yaml
+            - type: custom:decluttering-card
+              template: switch_button_card
+              variables:
+                - entity: script.mitsubishi_fan_timer
+                - name: Timer
+                - label: ""
+                - icon: timer
+                - show_state: false
+                - opacity: 0.8
+                - margin-left: 20px
+                - tap_action:
+                    action: toggle
+                - hold_action:
+                    action: more-info
+                    haptic: light
+            - !include ../decluttering_templates/blank-card.yaml

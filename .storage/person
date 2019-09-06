@@ -1,0 +1,24 @@
+{
+    "data": {
+        "persons": [
+            {
+                "device_trackers": [
+                    "device_tracker.thanhtt_mi9"
+                ],
+                "id": "30deab5dac5941fb9c5148aa1ecb4f5f",
+                "name": "Th\u00e0nh",
+                "user_id": "916b84a720e4406384a0a297b44ef883"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.anhs_iphone"
+                ],
+                "id": "53e363a1e6b542e9b301e392df6f3216",
+                "name": "\u00c1nh",
+                "user_id": "23efe18b028042bbb94b219df8e4c4f6"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 1
+}

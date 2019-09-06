@@ -1,0 +1,86 @@
+{
+    "simple-thermostat": {
+        "dir": "/config/www/github/nervetattoo/",
+        "version": "0.26.0-0"
+    },
+    "lovelace-home-feed-card": {
+        "dir": "/config/www/github/gadgetchnnel/",
+        "version": "0.2.9"
+    },
+    "alarm_control_panel-card": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "0.4.0"
+    },
+    "button-card": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "1.11.1"
+    },
+    "card-modder": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "592b14"
+    },
+    "card-tools": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "0efed8"
+    },
+    "compact-custom-header": {
+        "dir": "/config/www/custom-lovelace/compact-custom-header/",
+        "version": "1.3.1"
+    },
+    "slider-entity-row": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "93fe89"
+    },
+    "theme-maker": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "cd0c8e"
+    },
+    "tracker-card": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "1.2.6"
+    },
+    "vertical-stack-in-card": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "v0.1.3"
+    },
+    "mini-graph-card-bundle": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "0.6.0"
+    },
+    "secondaryinfo-entity-row": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "0.3.1"
+    },
+    "markdown-mod": {
+        "dir": "/config/www/custom-lovelace/",
+        "version": "09f056"
+    },
+    "more-info-card": {
+        "dir": "/config/www/github/gadgetchnnel/",
+        "version": "3bcc9c"
+    },
+    "decluttering-card": {
+        "dir": "/config/www/custom-lovelace/decluttering-card/",
+        "version": "0.2.0"
+    },
+    "state-switch": {
+        "dir": "/config/www/custom-lovelace/lovelace-state-switch/",
+        "version": "a64a9b"
+    },
+    "popup-card": {
+        "dir": "/config/www/custom-lovelace/lovelace-popup-card/",
+        "version": "78d39a"
+    },
+    "card-loader": {
+        "dir": "/config/www/custom-lovelace/lovelace-card-loader/",
+        "version": "f68ed5"
+    },
+    "card-mod": {
+        "dir": "/config/www/custom-lovelace/lovelace-card-mod/",
+        "version": "c45bce"
+    },
+    "auto-entities": {
+        "dir": "/config/www/custom-lovelace/auto-entities/",
+        "version": "4f2189"
+    }
+}

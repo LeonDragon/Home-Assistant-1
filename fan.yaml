@@ -1,0 +1,57 @@
+- platform: template
+  fans:
+    living_room_fan:
+      friendly_name: "Living Room Fan"
+      value_template: "{{ states('input_boolean.mitsubishi_fan_state') }}"
+      turn_on:
+        service: script.mitsubishi_fan_on
+      turn_off:
+        service: script.mitsubishi_fan_off
+
+- platform: template
+  fans:
+    bedroom_fan:
+      friendly_name: "Bedroom Fan"
+      value_template: "{{ states('switch.mi_plug_2') }}"
+      speed_template: >
+        {% if is_state('input_select.hitachi_fan_speed', '1') %}
+            '1'
+        {% elif is_state('input_select.hitachi_fan_speed', '2') %}
+            '2'
+        {% elif is_state('input_select.hitachi_fan_speed', '3') %}
+            '3'
+        {% elif is_state('input_select.hitachi_fan_speed', '4') %}
+            '4'
+        {% endif %}
+      turn_on:
+        service: script.hitachi_fan_on
+      turn_off:
+        service: script.hitachi_fan_off
+      speeds:
+        - '1'
+        - '2'
+        - '3'
+        - '4'
+      set_speed:
+        service_template: >
+          {% if speed == "1" %}
+              script.hitachi_fan_1
+          {% elif speed == "2" %}
+              script.hitachi_fan_3
+          {% elif speed == "3" %}
+              script.hitachi_fan_3
+          {% elif speed == "4" %}
+              script.hitachi_fan_4
+          {% endif %}
+      oscillating_template: "{{ states('input_select.hitachi_fan_oscillating') }}"
+      set_oscillating:
+        service: script.hitachi_fan_speed
+        data_template:
+          speed: "{{ oscillating }}"
+
+
+- platform: xiaomi_miio_fan
+  name: Xiaomi Smart Fan
+  host: 192.168.10.128
+  token: !secret fan_token
+  model: zhimi.fan.za1

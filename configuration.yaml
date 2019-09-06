@@ -1,0 +1,167 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Trinh's Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Ho_Chi_Minh
+  # Customization file
+  customize: !include customize.yaml
+  whitelist_external_dirs:
+    - /tmp
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: !secret domain
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - yeelight
+  enable:
+    - homekit
+
+lovelace:
+  mode: yaml
+
+frontend:
+  javascript_version: latest
+  themes: !include_dir_named themes
+
+custom_updater:
+  track:
+    - cards
+    - components
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+    - https://raw.githubusercontent.com/MizterB/lovelace-secondaryinfo-entity-row/master/custom_cards.json
+    - https://raw.githubusercontent.com/benct/lovelace-multiple-entity-row/master/tracker.json
+
+xiaomi_aqara:
+  discovery_retry: 10
+  gateways:
+    - mac: 78:11:DC:DE:FC:7F
+      key: !secret gateways_1_key
+      host: '192.168.10.46'
+    - mac: 04:CF:8C:91:34:6E
+      key: !secret gateways_2_key
+      host: '192.168.10.45'
+
+
+yeelight:
+  devices:
+    192.168.10.252:
+      name: desk_lamp
+    192.168.10.49:
+      name: bedside_lamp
+
+smartir:
+  update_branch: rc
+
+climate:
+  - platform: smartir
+    name: Daikin AC
+    unique_id: daikin_ac
+    device_code: 1101
+    controller_data: 192.168.10.144
+    temperature_sensor: sensor.temperature_158d0002f81e37
+    humidity_sensor: sensor.humidity_158d0002f81e37
+  - platform: smartir
+    name: LG AC
+    unique_id: lg_ac
+    device_code: 1061
+    controller_data: 192.168.10.144
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api
+    allowed_chat_ids:
+      - !secret trinh_id
+notify:
+  - name: Telegram Message
+    platform: telegram
+    chat_id: !secret trinh_id
+
+ifttt:
+  key: !secret ifttt_api
+
+alarm_control_panel:
+  - platform: manual
+    name: Home Alarm
+    code: !secret alarm_control
+    pending_time: 5
+    delay_time: 5
+    trigger_time: 4
+    disarmed:
+      trigger_time: 0
+    armed_home:
+      pending_time: 0
+      delay_time: 0
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky
+    mode: daily
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 60
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+
+owntracks:
+  max_gps_accuracy: 200
+  waypoints: true
+  mqtt_topic: "owntracks/#"
+
+
+google_assistant:
+  project_id: !secret google_project_id
+  api_key: !secret google_api_key
+  exposed_domains:
+    - switch
+    - light
+    - climate
+    - fan
+    - media_player
+    - input_boolean
+    - sensor
+
+# Text to speech
+tts:
+  - platform: google_translate
+    cache: false
+    cache_dir: /tmp/tts
+    time_memory: 300
+    base_url: https://thanhtt.duckdns.org
+    service_name: google_say
+    language: 'vi'
+
+switch: !include switch.yaml
+light: !include light.yaml
+fan: !include fan.yaml
+media_player: !include media_player.yaml
+
+sensor: !include sensor.yaml
+binary_sensor: !include binary_sensors.yaml
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+input_boolean: !include input_boolean.yaml
+input_number: !include input_number.yaml
+input_select: !include input_select.yaml
+zone: !include zones.yaml

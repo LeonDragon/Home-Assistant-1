@@ -1,0 +1,239 @@
+title: Lights
+icon: mdi:ceiling-light
+path: lights
+cards:
+
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Quick Access'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Home
+              - icon: home
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Media Player
+              - icon: television
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/media
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/media
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Currently On
+              - icon: lightbulb-on-outline
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/currently-on
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/currently-on
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: header_text
+            variables:
+              - content: '### Living Room Lights'
+      - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.living_room_ceiling_light
+              - name: Ceiling Light
+              - icon: ceiling-light
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.living_room_wall_light_1
+              - name: Wall Light 1
+              - icon: wall-sconce-flat
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.living_room_led_light
+              - name: Led Light
+              - icon: led-strip
+          - !include ../decluttering_templates/blank-card.yaml
+      - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: light.desk_lamp
+              - name: Desk Lamp
+              - icon: mdi:desk-lamp
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: light.gateway_light_04cf8c91346e
+              - name: Gateway
+              - icon: alarm-light-outline
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:button-card
+            color_type: blank-card
+            aspect_ratio: 1/1
+          - !include ../decluttering_templates/blank-card.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: header_text
+            variables:
+              - content: '### Bedroom Lights'
+          - !include ../decluttering_templates/blank-card.yaml
+      - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.bedroom_ceiling_light
+              - name: Ceiling Light
+              - icon: ceiling-light
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.bedroom_wall_light_1
+              - name: Wall Light 1
+              - icon: wall-sconce-flat
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.bedroom_wall_light_2
+              - name: Wall Light 2
+              - icon: wall-sconce-flat
+          - !include ../decluttering_templates/blank-card.yaml
+      - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.bedroom_led_light
+              - name: Led Light
+              - icon: led-strip
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: light.bedside_lamp
+              - name: Bedside Lamp
+              - icon: lamp
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: light.gateway_light_7811dcdefc7f
+              - name: Gateway
+              - icon: alarm-light-outline
+          - !include ../decluttering_templates/blank-card.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:decluttering-card
+            template: header_text
+            variables:
+              - content: '### Outside Lights'
+          - !include ../decluttering_templates/blank-card.yaml
+      - !include ../decluttering_templates/blank-card.yaml
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.gate_light
+              - name: Gate Light
+              - icon: octagram-outline
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:decluttering-card
+            template: light_button_card
+            variables:
+              - entity: switch.balcony_light
+              - name: Balcony Light
+              - icon: octagram-outline
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: custom:button-card
+            color_type: blank-card
+            aspect_ratio: 1/1
+          - !include ../decluttering_templates/blank-card.yaml

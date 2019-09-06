@@ -1,0 +1,1577 @@
+{
+    "data": [
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "changed_by": null,
+                    "code_arm_required": true,
+                    "code_format": "number",
+                    "friendly_name": "Home Alarm"
+                },
+                "context": {
+                    "id": "f4bcf0dc9db2426d98d3bc7f5d81388a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "alarm_control_panel.home_alarm",
+                "last_changed": "2019-09-05T16:16:29.024243+00:00",
+                "last_updated": "2019-09-05T16:16:29.024243+00:00",
+                "state": "armed_night"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Daikin AC Select Timer",
+                    "icon": "mdi:timer",
+                    "initial": 6.0,
+                    "max": 10.0,
+                    "min": 1.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "c735a73483b54a57ba62e06cbad7ae99",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.daikin_ac_select_timer",
+                "last_changed": "2019-09-05T10:28:29.285632+00:00",
+                "last_updated": "2019-09-05T10:28:29.285632+00:00",
+                "state": "6.0"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Hitachi Fan Oscillating",
+                    "options": [
+                        "True",
+                        "False"
+                    ]
+                },
+                "context": {
+                    "id": "c04af824408045568590c2ca226296a5",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_select.hitachi_fan_oscillating",
+                "last_changed": "2019-09-05T10:28:29.286395+00:00",
+                "last_updated": "2019-09-05T10:28:29.286395+00:00",
+                "state": "True"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Hitachi Fan Speed",
+                    "icon": "mdi:speedometer",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                },
+                "context": {
+                    "id": "1adcf56c8b8f47ab99a27d6f678d1b22",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_select.hitachi_fan_speed",
+                "last_changed": "2019-09-05T10:28:29.287001+00:00",
+                "last_updated": "2019-09-05T10:28:29.287001+00:00",
+                "state": "1"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Set Fan Mode",
+                    "icon": "mdi:fan",
+                    "options": [
+                        "auto",
+                        "night",
+                        "low",
+                        "lowMedium",
+                        "medium",
+                        "mediumHigh",
+                        "high",
+                        "powerful"
+                    ]
+                },
+                "context": {
+                    "id": "ca7f6771a76e4db6af6f0aeb4e267cf8",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_select.daikin_ac_fan_mode",
+                "last_changed": "2019-09-05T10:28:29.287737+00:00",
+                "last_updated": "2019-09-05T10:28:29.287737+00:00",
+                "state": "lowMedium"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Mitsubishi Fan state"
+                },
+                "context": {
+                    "id": "05b8294173d3447a81abf2a81124a190",
+                    "parent_id": "84b684ce8c624ef4aa52128afb746cb7",
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.mitsubishi_fan_state",
+                "last_changed": "2019-09-05T12:56:13.724067+00:00",
+                "last_updated": "2019-09-05T12:56:13.724067+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Daikin AC Timer"
+                },
+                "context": {
+                    "id": "b5487c22bbd84361888a5ca4dee78a15",
+                    "parent_id": null,
+                    "user_id": "916b84a720e4406384a0a297b44ef883"
+                },
+                "entity_id": "input_boolean.daikin_ac_timer",
+                "last_changed": "2019-09-05T14:35:29.060567+00:00",
+                "last_updated": "2019-09-05T14:35:29.060567+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Hitachi Fan state"
+                },
+                "context": {
+                    "id": "5d629bfe3aac4a0ca0a69a0234db811e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.hitachi_fan_state",
+                "last_changed": "2019-09-05T10:28:29.289665+00:00",
+                "last_updated": "2019-09-05T10:28:29.289665+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "commands_encoding": "Base64",
+                    "current_temperature": null,
+                    "device_code": 1061,
+                    "fan_mode": "lowest",
+                    "fan_modes": [
+                        "lowest",
+                        "low",
+                        "mid",
+                        "high",
+                        "highest",
+                        "auto"
+                    ],
+                    "friendly_name": "LG AC",
+                    "hvac_modes": [
+                        "off",
+                        "cool",
+                        "dry",
+                        "fan_only"
+                    ],
+                    "icon": "mdi:air-conditioner",
+                    "last_on_operation": "cool",
+                    "manufacturer": "LG",
+                    "max_temp": 30.0,
+                    "min_temp": 16.0,
+                    "supported_controller": "Broadlink",
+                    "supported_features": 9,
+                    "supported_models": [
+                        "Unknown"
+                    ],
+                    "target_temp_step": 1.0,
+                    "temperature": 16.0
+                },
+                "context": {
+                    "id": "0e1dd86281e84311b79aae2b84f630a1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "climate.lg_ac",
+                "last_changed": "2019-09-05T10:28:29.290499+00:00",
+                "last_updated": "2019-09-05T10:28:29.290499+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "commands_encoding": "Base64",
+                    "current_humidity": 72.8,
+                    "current_temperature": 29.5,
+                    "device_code": 1101,
+                    "fan_mode": "high",
+                    "fan_modes": [
+                        "auto",
+                        "night",
+                        "low",
+                        "lowMedium",
+                        "medium",
+                        "mediumHigh",
+                        "high",
+                        "powerful"
+                    ],
+                    "friendly_name": "Daikin AC",
+                    "hvac_modes": [
+                        "off",
+                        "auto",
+                        "dry",
+                        "cool",
+                        "fan_only",
+                        "heat"
+                    ],
+                    "icon": "mdi:air-conditioner",
+                    "last_on_operation": "cool",
+                    "manufacturer": "Daikin",
+                    "max_temp": 30.0,
+                    "min_temp": 18.0,
+                    "supported_controller": "Broadlink",
+                    "supported_features": 9,
+                    "supported_models": [
+                        "FTXS20LVMA",
+                        "FTXS25LVMA",
+                        "FTXS35LVMA",
+                        "FTXS46LVMA",
+                        "FTXS50LVMA",
+                        "FTXS60LVMA",
+                        "FTXS71LVMA",
+                        "FTXS85LVMA",
+                        "FTXS95LVMA"
+                    ],
+                    "target_temp_step": 1.0,
+                    "temperature": 24
+                },
+                "context": {
+                    "id": "f00e5590624947c7ac02c3ee6f2c3bf0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "climate.daikin_ac",
+                "last_changed": "2019-09-06T00:20:52.845714+00:00",
+                "last_updated": "2019-09-06T01:18:22.956662+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "editable": true,
+                    "entity_picture": "\"/local/Pics/Anh.jpg\"",
+                    "friendly_name": "\u00c1nh",
+                    "gps_accuracy": 20,
+                    "id": "53e363a1e6b542e9b301e392df6f3216",
+                    "latitude": 20.821064519744315,
+                    "longitude": 106.64868492315038,
+                    "source": "device_tracker.anhs_iphone",
+                    "user_id": "23efe18b028042bbb94b219df8e4c4f6"
+                },
+                "context": {
+                    "id": "b0127a388c6e47e1b8742ed36f56f234",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "person.anh",
+                "last_changed": "2019-09-06T00:33:10.408638+00:00",
+                "last_updated": "2019-09-06T00:33:10.408638+00:00",
+                "state": "Kien Long Bank"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "editable": true,
+                    "entity_picture": "\"/local/Pics/Trinh.jpg\"",
+                    "friendly_name": "Th\u00e0nh",
+                    "gps_accuracy": 26,
+                    "id": "30deab5dac5941fb9c5148aa1ecb4f5f",
+                    "latitude": 20.8364622,
+                    "longitude": 106.6966312,
+                    "source": "device_tracker.thanhtt_mi9",
+                    "user_id": "916b84a720e4406384a0a297b44ef883"
+                },
+                "context": {
+                    "id": "38a955da7f1842d099a0374fefd36315",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "person.trinh_tien_thanh",
+                "last_changed": "2019-09-06T01:20:59.222038+00:00",
+                "last_updated": "2019-09-06T01:29:18.546129+00:00",
+                "state": "Vosco"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "commands_encoding": "Base64",
+                    "device_class": "tv",
+                    "device_code": 1080,
+                    "friendly_name": "Living Room Soundbar",
+                    "icon": "mdi:speaker",
+                    "manufacturer": "Insignia",
+                    "supported_controller": "Broadlink",
+                    "supported_features": 3468,
+                    "supported_models": [
+                        "NS-42D510NA15"
+                    ]
+                },
+                "context": {
+                    "id": "686acff9c71b48828419a25d05138e1e",
+                    "parent_id": null,
+                    "user_id": "916b84a720e4406384a0a297b44ef883"
+                },
+                "entity_id": "media_player.soundbar",
+                "last_changed": "2019-09-05T13:55:39.977949+00:00",
+                "last_updated": "2019-09-05T13:55:39.977949+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "commands_encoding": "Base64",
+                    "device_class": "tv",
+                    "device_code": 1060,
+                    "friendly_name": "Living Room TV",
+                    "icon": "mdi:television",
+                    "manufacturer": "Samsung",
+                    "supported_controller": "Broadlink",
+                    "supported_features": 3516,
+                    "supported_models": [
+                        "UE40F6500"
+                    ]
+                },
+                "context": {
+                    "id": "3dba0dbbcad349b7ae519bc713ab4245",
+                    "parent_id": null,
+                    "user_id": "916b84a720e4406384a0a297b44ef883"
+                },
+                "entity_id": "media_player.tivi",
+                "last_changed": "2019-09-05T13:55:28.169623+00:00",
+                "last_updated": "2019-09-05T13:55:28.169623+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "turn off bedside lamp when sunrise",
+                    "id": "turn_off_bedside_lamp_when_sunrise",
+                    "last_triggered": "2019-09-05T22:38:17.125604+00:00"
+                },
+                "context": {
+                    "id": "2416450d244949fcaa1bb012766157b3",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_bedside_lamp_when_sunrise",
+                "last_changed": "2019-09-05T10:28:29.311478+00:00",
+                "last_updated": "2019-09-05T22:38:17.126194+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Daikin AC Set Timer",
+                    "id": "daikin_ac_set_timer",
+                    "last_triggered": "2019-08-18T12:46:42.327037+00:00"
+                },
+                "context": {
+                    "id": "2b566ba8838247f48d351506e376852c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.daikin_ac_set_timer",
+                "last_changed": "2019-09-05T10:28:29.312616+00:00",
+                "last_updated": "2019-09-05T10:28:29.312616+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Daikin AC Set Fan Speed",
+                    "id": "daikin_ac_set_fan_speed",
+                    "last_triggered": "2019-08-05T15:54:09.835876+00:00"
+                },
+                "context": {
+                    "id": "5ffba6432de74847a8a460cdce99a51f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.daikin_ac_set_fan_speed",
+                "last_changed": "2019-09-05T10:28:29.313565+00:00",
+                "last_updated": "2019-09-05T10:28:29.313565+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Set Mode when turn on Daikin AC",
+                    "id": "8bd49c9f30284eacac98a49204a5e32a",
+                    "last_triggered": "2019-09-06T00:20:39.752349+00:00"
+                },
+                "context": {
+                    "id": "ef045a6d0c29461480f7fbe63ab9ccd8",
+                    "parent_id": "4a2fe1f42b1d430c95b06d9383bd5b55",
+                    "user_id": null
+                },
+                "entity_id": "automation.set_mode_when_turn_on_daikin_ac",
+                "last_changed": "2019-09-05T10:28:29.314513+00:00",
+                "last_updated": "2019-09-06T00:20:39.752980+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Click Righ button to turn on Daikin AC",
+                    "id": "b0d5e6d5f2cc4dca94fc870b3d86ffb8",
+                    "last_triggered": "2019-09-06T00:20:39.766513+00:00"
+                },
+                "context": {
+                    "id": "4a2fe1f42b1d430c95b06d9383bd5b55",
+                    "parent_id": "bed283a287ff49879bee281e81e9ff59",
+                    "user_id": null
+                },
+                "entity_id": "automation.click_righ_button_to_turn_on_daikin_ac",
+                "last_changed": "2019-09-05T10:28:29.315486+00:00",
+                "last_updated": "2019-09-06T00:20:39.767063+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Click Righ button to turn off Daikin AC",
+                    "id": "619d42ce044c4b2a83f4515b915a5c03",
+                    "last_triggered": "2019-09-06T00:20:32.641457+00:00"
+                },
+                "context": {
+                    "id": "2465fd51e3d84af981b6c7c7b36bfc8f",
+                    "parent_id": "b65250e43c084032b1f55b30b6430536",
+                    "user_id": null
+                },
+                "entity_id": "automation.click_righ_button_to_turn_off_daikin_ac",
+                "last_changed": "2019-09-05T10:28:29.316454+00:00",
+                "last_updated": "2019-09-06T00:20:32.642009+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn off Daikin AC When Sunrise",
+                    "id": "4aa0151423044a58a6d926b120d48ff2",
+                    "last_triggered": "2019-09-05T22:38:17.112544+00:00"
+                },
+                "context": {
+                    "id": "49aeb7ae84924a618a5f04ac22ce061a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_daikin_ac_when_sunrise",
+                "last_changed": "2019-09-05T10:28:29.317400+00:00",
+                "last_updated": "2019-09-05T22:38:17.114364+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Click Left button to toggle Bedroom Fan",
+                    "id": "5bf4b90326494600b8358e8bef186f10",
+                    "last_triggered": "2019-09-04T15:20:39.442839+00:00"
+                },
+                "context": {
+                    "id": "c94b586a205b4d9daed886e7fc72f56e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.click_left_button_to_toggle_bedroom_fan",
+                "last_changed": "2019-09-05T10:28:29.318668+00:00",
+                "last_updated": "2019-09-05T10:28:29.318668+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Click both button to set Sleeping",
+                    "id": "6b7bd20ff7f14c55a1c7748cdc4b34a0",
+                    "last_triggered": "2019-09-05T16:21:36.144493+00:00"
+                },
+                "context": {
+                    "id": "6ebed31f33c0465dba2a2c77da74853e",
+                    "parent_id": "d57cf5e6314144549cebf79a64bfa1a7",
+                    "user_id": null
+                },
+                "entity_id": "automation.click_both_button_to_set_sleeping",
+                "last_changed": "2019-09-05T10:28:29.319666+00:00",
+                "last_updated": "2019-09-05T16:21:36.145052+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Auto start duckdns",
+                    "id": "auto_start_duckdns",
+                    "last_triggered": "2019-09-05T10:28:57.624002+00:00"
+                },
+                "context": {
+                    "id": "e0bcddde7e5243438bfe5abdcabe42a2",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.auto_start_duckdns",
+                "last_changed": "2019-09-05T10:28:29.320583+00:00",
+                "last_updated": "2019-09-05T10:28:57.624614+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Notify 6h30 AM",
+                    "id": "notify_6_30_AM",
+                    "last_triggered": "2019-09-05T23:29:20.047389+00:00"
+                },
+                "context": {
+                    "id": "9264c42308a949f0b3d2a6594849312e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.notify_6h30_am",
+                "last_changed": "2019-09-05T10:28:29.322854+00:00",
+                "last_updated": "2019-09-05T23:29:20.048166+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Set theme when hass start",
+                    "id": "set_theme_when_hass_start",
+                    "last_triggered": "2019-09-05T10:28:57.735400+00:00"
+                },
+                "context": {
+                    "id": "a030b5c2e66844bd8c2325a9b7bc4f88",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.set_theme_when_hass_start",
+                "last_changed": "2019-09-05T10:28:29.323993+00:00",
+                "last_updated": "2019-09-05T10:28:57.736177+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Notify Daily",
+                    "id": "notify_daily",
+                    "last_triggered": "2019-09-06T01:00:00.042283+00:00"
+                },
+                "context": {
+                    "id": "bb4717ad3ec94aada3dc52cef291ea38",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.notify_daily",
+                "last_changed": "2019-09-05T10:28:29.324896+00:00",
+                "last_updated": "2019-09-06T01:00:00.042802+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Start HomeKit",
+                    "id": "start_homekit",
+                    "last_triggered": "2019-09-05T10:28:57.635053+00:00"
+                },
+                "context": {
+                    "id": "ebbec4711181479fbd1ff9816fb73c41",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.start_homekit",
+                "last_changed": "2019-09-05T10:28:29.325812+00:00",
+                "last_updated": "2019-09-05T10:28:57.635582+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Auto turn on living room light when get home",
+                    "id": "auto_turn_on_living_room_light_when_get_home",
+                    "last_triggered": "2019-08-28T14:31:32.302785+00:00"
+                },
+                "context": {
+                    "id": "f7b405c1883e4a80a08ebd8e9ea12699",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.auto_turn_on_living_room_light_when_get_home",
+                "last_changed": "2019-09-05T10:28:29.326774+00:00",
+                "last_updated": "2019-09-05T10:28:29.326774+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Ifttt webhook received",
+                    "id": "ifttt_webhook_received",
+                    "last_triggered": "2019-08-04T02:04:28.875018+00:00"
+                },
+                "context": {
+                    "id": "c5ea8ee4c19e4d41a4135fef70b7e65f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.ifttt_webhook_received",
+                "last_changed": "2019-09-05T10:28:29.327654+00:00",
+                "last_updated": "2019-09-05T10:28:29.327654+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Notify Anh Location Enter",
+                    "id": "notify_anh_location_enter",
+                    "last_triggered": "2019-09-05T15:08:07.732307+00:00"
+                },
+                "context": {
+                    "id": "61872cee4f16430dbaaf43d213ebe141",
+                    "parent_id": "737d8c652caf4297b364b9f3283cee75",
+                    "user_id": null
+                },
+                "entity_id": "automation.notify_anh_location_enter",
+                "last_changed": "2019-09-05T10:28:29.330943+00:00",
+                "last_updated": "2019-09-05T15:08:07.732859+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Auto update location when hass start",
+                    "id": "auto_start_duckdns",
+                    "last_triggered": "2019-09-05T10:28:59.173488+00:00"
+                },
+                "context": {
+                    "id": "d851b19910b949b7a0c78a3943119ebd",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.auto_update_location_when_hass_start",
+                "last_changed": "2019-09-05T10:28:29.332019+00:00",
+                "last_updated": "2019-09-05T10:28:59.174136+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Notify Anh Location Leave",
+                    "id": "notify_anh_location_leave",
+                    "last_triggered": "2019-09-05T10:56:24.539697+00:00"
+                },
+                "context": {
+                    "id": "3dc268679ed247fc9927651916df16b1",
+                    "parent_id": "6abb718e647e45a695ebe1c86d81f59f",
+                    "user_id": null
+                },
+                "entity_id": "automation.notify_anh_location_leave",
+                "last_changed": "2019-09-05T10:28:29.332976+00:00",
+                "last_updated": "2019-09-05T10:56:24.540266+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Restart Hass If Gateway unavailable",
+                    "id": "restart_hass_if_gateway_unavailable",
+                    "last_triggered": "2019-08-28T23:07:19.812884+00:00"
+                },
+                "context": {
+                    "id": "9e927f964bbd4db5849cf53560f86e56",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.restart_hass_if_gateway_unavailable",
+                "last_changed": "2019-09-05T10:28:29.334081+00:00",
+                "last_updated": "2019-09-05T10:28:29.334081+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Security notify",
+                    "last_triggered": "2019-09-05T16:16:29.059325+00:00"
+                },
+                "context": {
+                    "id": "d9ebb9a3ebf94c47ae906a8854a2b41f",
+                    "parent_id": "f4bcf0dc9db2426d98d3bc7f5d81388a",
+                    "user_id": null
+                },
+                "entity_id": "automation.security_notify",
+                "last_changed": "2019-09-05T10:28:29.334930+00:00",
+                "last_updated": "2019-09-05T16:16:29.059859+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Play ringtone when gate open",
+                    "id": "play_ringtone_when_gate_open",
+                    "last_triggered": "2019-09-06T01:07:41.625656+00:00"
+                },
+                "context": {
+                    "id": "0679b0fae7ed4d6ea5932aad0cda80a7",
+                    "parent_id": "272e3f47e11849e58329b3f9e2d2f46e",
+                    "user_id": null
+                },
+                "entity_id": "automation.play_ringtone_when_gate_open",
+                "last_changed": "2019-09-05T10:28:29.335867+00:00",
+                "last_updated": "2019-09-06T01:07:41.626258+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Trigger alarm while Away mode",
+                    "id": "trigger_alarm_while_away_mode",
+                    "last_triggered": "2019-08-19T11:16:41.452383+00:00"
+                },
+                "context": {
+                    "id": "2ecbd4212d354adb9ab34cf497c9f9d2",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.trigger_alarm_while_away_mode",
+                "last_changed": "2019-09-05T10:28:29.336817+00:00",
+                "last_updated": "2019-09-05T10:28:29.336817+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sent notification when gate close",
+                    "id": "sent_notification_when_gate_close",
+                    "last_triggered": "2019-09-06T01:08:15.989121+00:00"
+                },
+                "context": {
+                    "id": "b0014ff04c854daaa727dd36daa3b50b",
+                    "parent_id": "5e4dc6b8f30a45598f446f47a12e8c6c",
+                    "user_id": null
+                },
+                "entity_id": "automation.sent_notification_when_gate_close",
+                "last_changed": "2019-09-05T10:28:29.337842+00:00",
+                "last_updated": "2019-09-06T01:08:15.989721+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Trigger alarm while Night mode",
+                    "id": "trigger_alarm_while_night_mode",
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "0256ea28739e4c399935c20d0eae2ff9",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.trigger_alarm_while_night_mode",
+                "last_changed": "2019-09-05T10:28:29.338766+00:00",
+                "last_updated": "2019-09-05T10:28:29.338766+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn on gate light when gate open",
+                    "id": "turn_on_gate_light_when_gate_open",
+                    "last_triggered": "2019-09-05T13:38:40.080087+00:00"
+                },
+                "context": {
+                    "id": "5fef9fb0df3c420daf03e20918e7621e",
+                    "parent_id": "d05a57834f8c4f939bf986bfdfc57a36",
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_on_gate_light_when_gate_open",
+                "last_changed": "2019-09-05T10:28:29.339745+00:00",
+                "last_updated": "2019-09-05T13:38:40.080662+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sign Gate Light",
+                    "id": "sign_gate_light",
+                    "last_triggered": "2019-09-05T13:39:05.155242+00:00"
+                },
+                "context": {
+                    "id": "09830c8351cc4b4eb894c20f1d4c4178",
+                    "parent_id": "4dd9a5e6b3e44555bc31c8a8fe5a225a",
+                    "user_id": null
+                },
+                "entity_id": "automation.sign_gate_light",
+                "last_changed": "2019-09-05T10:28:29.340666+00:00",
+                "last_updated": "2019-09-05T13:39:05.155810+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn off gate light when gate close",
+                    "id": "turn_off_gate_light_when_gate_close",
+                    "last_triggered": "2019-09-05T13:38:33.292767+00:00"
+                },
+                "context": {
+                    "id": "b6641d5c1bf64f1293de27384167b436",
+                    "parent_id": "400e04bb139549cbba4f1d73b1e28258",
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_gate_light_when_gate_close",
+                "last_changed": "2019-09-05T10:28:29.341632+00:00",
+                "last_updated": "2019-09-05T13:38:33.293377+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sign Balcony Light",
+                    "id": "sign_balcony_light",
+                    "last_triggered": "2019-09-05T09:22:32.804323+00:00"
+                },
+                "context": {
+                    "id": "2aa8bd0e4c4648d0bcdd7ad5122174bb",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.sign_balcony_light",
+                "last_changed": "2019-09-05T10:28:29.342543+00:00",
+                "last_updated": "2019-09-05T10:28:29.342543+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Play ringtone when click gate switch",
+                    "id": "play_ringtone_when_click_gate_switch",
+                    "last_triggered": "2019-09-05T13:20:54.302785+00:00"
+                },
+                "context": {
+                    "id": "6b05b87f7a9d48318c1178f67769a9e1",
+                    "parent_id": "c27e05a708f84b8594062d7124a2c191",
+                    "user_id": null
+                },
+                "entity_id": "automation.play_ringtone_when_click_gate_switch",
+                "last_changed": "2019-09-05T10:28:29.343519+00:00",
+                "last_updated": "2019-09-05T13:20:54.303498+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Sign Bedroom All Lights",
+                    "id": "sign_bedroom_all_lights",
+                    "last_triggered": "2019-09-06T00:57:19.725823+00:00"
+                },
+                "context": {
+                    "id": "02009a8186f94d029aa7704c1391e52a",
+                    "parent_id": "2e83513ace714b6fbb0ec096c77dfcce",
+                    "user_id": null
+                },
+                "entity_id": "automation.sign_bedroom_all_lights",
+                "last_changed": "2019-09-05T10:28:29.344448+00:00",
+                "last_updated": "2019-09-06T00:57:19.726397+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Living room fan toggle",
+                    "id": "living_room_fan_toggle",
+                    "last_triggered": "2019-09-05T12:56:13.741214+00:00"
+                },
+                "context": {
+                    "id": "05b8294173d3447a81abf2a81124a190",
+                    "parent_id": "84b684ce8c624ef4aa52128afb746cb7",
+                    "user_id": null
+                },
+                "entity_id": "automation.living_room_fan_toggle",
+                "last_changed": "2019-09-05T10:28:29.345391+00:00",
+                "last_updated": "2019-09-05T12:56:13.741746+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Auto turn off bslamp when hass start",
+                    "id": "auto_turn_off_bslamp_when_hass_start",
+                    "last_triggered": "2019-08-18T02:09:07.042024+00:00"
+                },
+                "context": {
+                    "id": "ea466bf8b3184d718f02134c8f00c7df",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.auto_turn_off_bslamp_when_hass_start",
+                "last_changed": "2019-09-05T10:28:29.346365+00:00",
+                "last_updated": "2019-09-05T10:28:29.346365+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Auto turn off yeelight when hass start",
+                    "id": "auto_turn_off_yeelight_when_hass_start",
+                    "last_triggered": "2019-08-25T14:25:14.844571+00:00"
+                },
+                "context": {
+                    "id": "fd6b1ccf9bd04e71a1e002ddcd5fb8bb",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.auto_turn_off_yeelight_when_hass_start",
+                "last_changed": "2019-09-05T10:28:29.347353+00:00",
+                "last_updated": "2019-09-05T10:28:29.347353+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Off Hitachi Night Mode",
+                    "id": "turn_off_hitachi_fan_night_mode",
+                    "last_triggered": "2019-08-24T04:51:55.506676+00:00"
+                },
+                "context": {
+                    "id": "308e7b00e331484083f02ecdb08246c3",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_hitachi_night_mode",
+                "last_changed": "2019-09-05T10:28:29.348397+00:00",
+                "last_updated": "2019-09-05T10:28:29.348397+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn On Hitachi Night Mode 10h",
+                    "id": "turn_on_hitachi_fan_night_mode_10h",
+                    "last_triggered": "2019-08-30T08:05:07.285033+00:00"
+                },
+                "context": {
+                    "id": "74cc2e7ac45f4cbcbaae4434c138152e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_on_hitachi_night_mode_10h",
+                "last_changed": "2019-09-05T10:28:29.349353+00:00",
+                "last_updated": "2019-09-05T10:28:29.349353+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Off Hitachi Fan Night Mode 10h when fan off",
+                    "id": "turn_off_hitachi_fan_night_mode_10h_when_fan_off",
+                    "last_triggered": "2019-08-29T00:46:06.528412+00:00"
+                },
+                "context": {
+                    "id": "d624838fc42f44429ec966716c6a8871",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_hitachi_fan_night_mode_10h_when_fan_off",
+                "last_changed": "2019-09-05T10:28:29.350356+00:00",
+                "last_updated": "2019-09-05T10:28:29.350356+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn Off Hitachi Fan Night Mode when fan off",
+                    "id": "turn_off_hitachi_fan_night_mode_when_fan_off",
+                    "last_triggered": "2019-08-24T04:51:55.499059+00:00"
+                },
+                "context": {
+                    "id": "0af597410ccb423eb101e0735f27c900",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_hitachi_fan_night_mode_when_fan_off",
+                "last_changed": "2019-09-05T10:28:29.351349+00:00",
+                "last_updated": "2019-09-05T10:28:29.351349+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Hitachi Fan Set Speed",
+                    "id": "hitachi_fan_set_speed",
+                    "last_triggered": "2019-09-02T13:50:33.362912+00:00"
+                },
+                "context": {
+                    "id": "6fc7c471b20049fb8f7b44b23db57ad3",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.hitachi_fan_set_speed",
+                "last_changed": "2019-09-05T10:28:29.352265+00:00",
+                "last_updated": "2019-09-05T10:28:29.352265+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Mute",
+                    "icon": "mdi:volume-off"
+                },
+                "context": {
+                    "id": "8075fa00cf1b4172a93948091d04237f",
+                    "parent_id": null,
+                    "user_id": "916b84a720e4406384a0a297b44ef883"
+                },
+                "entity_id": "switch.mute",
+                "last_changed": "2019-09-05T13:03:48.075068+00:00",
+                "last_updated": "2019-09-05T13:03:48.075068+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Mitsubishi Fan Natural Mode",
+                    "icon": "mdi:nativescript"
+                },
+                "context": {
+                    "id": "ae4db4a679c64beb84206dd66dcaf90d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.mitsubishi_fan_natural_mode",
+                "last_changed": "2019-09-05T10:28:30.542512+00:00",
+                "last_updated": "2019-09-05T10:28:30.542512+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Mitsubishi Fan Swing",
+                    "icon": "mdi:rotate-3d"
+                },
+                "context": {
+                    "id": "1eebf438bb56424ea4e55ca73655e64b",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.mitsubishi_fan_swing",
+                "last_changed": "2019-09-05T10:28:30.543253+00:00",
+                "last_updated": "2019-09-05T10:28:30.543253+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Hitachi Fan Night Mode",
+                    "icon": "mdi:weather-night"
+                },
+                "context": {
+                    "id": "17c16ef732ab491093510b8c0b2a5d10",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.hitachi_fan_night_mode",
+                "last_changed": "2019-09-05T10:28:30.583660+00:00",
+                "last_updated": "2019-09-05T10:28:30.583660+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Hitachi Fan Natural Mode",
+                    "icon": "mdi:nativescript"
+                },
+                "context": {
+                    "id": "5e3eea7fe4e84d89b55af97437db1aec",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.hitachi_fan_natural_mode",
+                "last_changed": "2019-09-05T10:28:30.585182+00:00",
+                "last_updated": "2019-09-05T10:28:30.585182+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Hitachi Fan Night Mode 10h",
+                    "icon": "mdi:brightness-3"
+                },
+                "context": {
+                    "id": "ac739c3318884354918002027a399fe1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.hitachi_fan_night_mode_10h",
+                "last_changed": "2019-09-05T10:28:30.586041+00:00",
+                "last_updated": "2019-09-05T10:28:30.586041+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "assumed_state": true,
+                    "friendly_name": "Hitachi Fan Swing",
+                    "icon": "mdi:rotate-3d"
+                },
+                "context": {
+                    "id": "29a24ec5aae645ce88aae726f16ead8f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.hitachi_fan_swing",
+                "last_changed": "2019-09-05T10:28:30.586803+00:00",
+                "last_updated": "2019-09-05T10:28:30.586803+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Balcony Light",
+                    "icon": "mdi:octagram-outline"
+                },
+                "context": {
+                    "id": "ae053e3ef4754479a36ea68a6d12226f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.balcony_light",
+                "last_changed": "2019-09-05T10:28:32.124885+00:00",
+                "last_updated": "2019-09-05T10:28:32.124885+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Gate Light (s)",
+                    "icon": "mdi:lightbulb-outline"
+                },
+                "context": {
+                    "id": "4dd9a5e6b3e44555bc31c8a8fe5a225a",
+                    "parent_id": "b6641d5c1bf64f1293de27384167b436",
+                    "user_id": null
+                },
+                "entity_id": "switch.gate_light_s",
+                "last_changed": "2019-09-05T13:39:05.131104+00:00",
+                "last_updated": "2019-09-05T13:39:05.131104+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Balcony Light (s)",
+                    "icon": "mdi:lightbulb-outline"
+                },
+                "context": {
+                    "id": "7e55507f27e84ca69bbfcd5e3b1d3409",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.balcony_light_s",
+                "last_changed": "2019-09-05T10:28:33.299431+00:00",
+                "last_updated": "2019-09-05T10:28:33.299431+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Gate Light",
+                    "icon": "mdi:octagram-outline"
+                },
+                "context": {
+                    "id": "b6641d5c1bf64f1293de27384167b436",
+                    "parent_id": "400e04bb139549cbba4f1d73b1e28258",
+                    "user_id": null
+                },
+                "entity_id": "switch.gate_light",
+                "last_changed": "2019-09-05T13:39:04.092795+00:00",
+                "last_updated": "2019-09-05T13:39:04.092795+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Living Room Wall Light 1",
+                    "icon": "mdi:wall-sconce-flat"
+                },
+                "context": {
+                    "id": "957b29a0038b46bbaffa8e77d88d83bb",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.living_room_wall_light_1",
+                "last_changed": "2019-09-05T14:09:59.835702+00:00",
+                "last_updated": "2019-09-05T14:09:59.835702+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Living Room Led Light",
+                    "icon": "mdi:led-strip"
+                },
+                "context": {
+                    "id": "cad7d0a2abe2474da263bd6f5d42b73b",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.living_room_led_light",
+                "last_changed": "2019-09-05T10:28:33.625196+00:00",
+                "last_updated": "2019-09-05T10:28:33.625196+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Bedroom All Light",
+                    "icon": "mdi:alarm-light-outline"
+                },
+                "context": {
+                    "id": "2e83513ace714b6fbb0ec096c77dfcce",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.bedroom_all_light",
+                "last_changed": "2019-09-06T00:57:19.696318+00:00",
+                "last_updated": "2019-09-06T00:57:19.696318+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Living Room Ceiling Light",
+                    "icon": "mdi:ceiling-light"
+                },
+                "context": {
+                    "id": "9bbbd56868e54de7b6c065ff465c1d53",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.living_room_ceiling_light",
+                "last_changed": "2019-09-05T14:09:57.071593+00:00",
+                "last_updated": "2019-09-05T14:09:57.071593+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Bedroom Led Light",
+                    "icon": "mdi:led-strip"
+                },
+                "context": {
+                    "id": "8de21aedc695490791f5a7a480727c42",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "switch.bedroom_led_light",
+                "last_changed": "2019-09-05T10:28:33.786349+00:00",
+                "last_updated": "2019-09-05T10:28:33.786349+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Bedroom Wall Light 2",
+                    "icon": "mdi:wall-sconce-flat"
+                },
+                "context": {
+                    "id": "02009a8186f94d029aa7704c1391e52a",
+                    "parent_id": "2e83513ace714b6fbb0ec096c77dfcce",
+                    "user_id": null
+                },
+                "entity_id": "switch.bedroom_wall_light_2",
+                "last_changed": "2019-09-06T00:57:19.797848+00:00",
+                "last_updated": "2019-09-06T00:57:19.797848+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Bedroom Wall Light 1",
+                    "icon": "mdi:wall-sconce-flat"
+                },
+                "context": {
+                    "id": "02009a8186f94d029aa7704c1391e52a",
+                    "parent_id": "2e83513ace714b6fbb0ec096c77dfcce",
+                    "user_id": null
+                },
+                "entity_id": "switch.bedroom_wall_light_1",
+                "last_changed": "2019-09-06T00:57:19.805782+00:00",
+                "last_updated": "2019-09-06T00:57:19.805782+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Bedroom Ceiling Light",
+                    "icon": "mdi:ceiling-light"
+                },
+                "context": {
+                    "id": "02009a8186f94d029aa7704c1391e52a",
+                    "parent_id": "2e83513ace714b6fbb0ec096c77dfcce",
+                    "user_id": null
+                },
+                "entity_id": "switch.bedroom_ceiling_light",
+                "last_changed": "2019-09-06T00:57:19.884341+00:00",
+                "last_updated": "2019-09-06T00:57:19.884341+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Speedtest Upload",
+                    "icon": "mdi:speedometer",
+                    "unit_of_measurement": "Mbit/s"
+                },
+                "context": {
+                    "id": "2340d99f22da43e78e57b2bc7158bd12",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_upload",
+                "last_changed": "2019-09-06T01:28:42.496642+00:00",
+                "last_updated": "2019-09-06T01:28:42.496642+00:00",
+                "state": "45.89"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Speedtest Ping",
+                    "icon": "mdi:speedometer",
+                    "unit_of_measurement": "ms"
+                },
+                "context": {
+                    "id": "531a9d523a7e4eb8986317d468b3e065",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_ping",
+                "last_changed": "2019-09-06T01:28:42.515247+00:00",
+                "last_updated": "2019-09-06T01:28:42.515247+00:00",
+                "state": "8.146"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Speedtest Download",
+                    "icon": "mdi:speedometer",
+                    "unit_of_measurement": "Mbit/s"
+                },
+                "context": {
+                    "id": "68639203bdfd4709835206db0ce5e7be",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "sensor.speedtest_download",
+                "last_changed": "2019-09-06T01:28:42.527033+00:00",
+                "last_updated": "2019-09-06T01:28:42.527033+00:00",
+                "state": "52.62"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "battery_level": 96,
+                    "friendly_name": "iPad",
+                    "gps_accuracy": 50,
+                    "latitude": 20.82853489091697,
+                    "longitude": 106.66028866554299,
+                    "source_type": "gps",
+                    "tid": "A2",
+                    "velocity": 0
+                },
+                "context": {
+                    "id": "db45f52dbdf34e0fa1c19a41fb98180d",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.thanhtt_ipad",
+                "last_changed": "2019-09-05T10:28:40.046616+00:00",
+                "last_updated": "2019-09-05T10:28:57.670201+00:00",
+                "state": "home"
+            }
+        },
+        {
+            "last_seen": "2019-09-06T01:29:47.018055+00:00",
+            "state": {
+                "attributes": {
+                    "battery_level": 100,
+                    "friendly_name": "\u00c1nh",
+                    "gps_accuracy": 165,
+                    "latitude": 20.821197509765625,
+                    "longitude": 106.64872384464311,
+                    "source_type": "gps",
+                    "tid": "7P"
+                },
+                "context": {
+                    "id": "ec9baa1ed9fe47718d53f87182ac5c7e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.thanhtt_anhs_iphone_7_plus",
+                "last_changed": "2019-09-06T00:37:45.985815+00:00",
+                "last_updated": "2019-09-06T00:53:54.387856+00:00",
+                "state": "Kien Long Bank"
+            }
+        }
+    ],
+    "key": "core.restore_state",
+    "version": 1
+}

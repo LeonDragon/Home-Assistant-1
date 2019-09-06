@@ -1,0 +1,353 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "356b46d7182f49958b49824e5deb6fba"
+                ],
+                "connections": [],
+                "id": "8851d04f7a614f67a1fd9e24b3accf73",
+                "identifiers": [
+                    [
+                        "cast",
+                        "ca94c8a19d0c980506dafd573faa544a"
+                    ]
+                ],
+                "manufacturer": "Unknown manufacturer",
+                "model": "Google Home Mini",
+                "name": "Living Room",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "6c066c6fd3a749d4b5238e6a97cce33b",
+                "config_entries": [
+                    "356b46d7182f49958b49824e5deb6fba"
+                ],
+                "connections": [],
+                "id": "328491208909438cb8a234897b5c0644",
+                "identifiers": [
+                    [
+                        "cast",
+                        "3adb4cdea6292dd947a9563b534ea916"
+                    ]
+                ],
+                "manufacturer": "Unknown manufacturer",
+                "model": "Google Home Mini",
+                "name": "Bedroom",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "356b46d7182f49958b49824e5deb6fba"
+                ],
+                "connections": [],
+                "id": "f4e1842284464f339e212d1ea3751858",
+                "identifiers": [
+                    [
+                        "cast",
+                        "bd1171a2329b4c279f4eba598be63211"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": "MIBOX3",
+                "name": "Android TV",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "a1a6e636ef5a4a019904c53442f18dc3"
+                ],
+                "connections": [],
+                "id": "e53c2e48ae934ae19f8888086c39242c",
+                "identifiers": [
+                    [
+                        "ios",
+                        "593223D2-2CBB-48DA-94D6-73ABCE367ACA"
+                    ]
+                ],
+                "manufacturer": "Apple",
+                "model": "iPhone 7 Plus",
+                "name": "\u00c1nh's iPhone 7 Plus",
+                "name_by_user": null,
+                "sw_version": "12.4",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "a1a6e636ef5a4a019904c53442f18dc3"
+                ],
+                "connections": [],
+                "id": "cb0d7da8a1ff493ba8e23a32407a65aa",
+                "identifiers": [
+                    [
+                        "ios",
+                        "7687B1FA-1BF6-4AC9-BCBF-249E9CE07AFE"
+                    ]
+                ],
+                "manufacturer": "Apple",
+                "model": "iPad Air 2",
+                "name": "Trinh\u2019s iPad",
+                "name_by_user": null,
+                "sw_version": "13.1",
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647"
+                    ]
+                ],
+                "id": "06126d3cfeb84632908743f3567149f1",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "189780c2574b4090bb5de088fc349f29",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets_sent"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router packets sent",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "c7f101413d6240f0a3617d6055e27288",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets/sec_received"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router packets/sec received",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "41f085c44ff24379916174f3529bd3c4",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets_received"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router packets received",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "38f8feef6eb0469089cf10933f1d297a",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_packets/sec_sent"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router packets/sec sent",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "c885a528a88c43b4af120a0f37594779",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_bytes_sent"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router bytes sent",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "61667aa6f5524567a186ded151fc6e25",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_kbyte/sec_sent"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router kbyte/sec sent",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "58383dfb1cc84bcba6f29cc8f3eceef0",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_bytes_received"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router bytes received",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": "ecb9f37e8a084b9bbd6cde3326a1ed48",
+                "config_entries": [
+                    "f9d129acaa1c454893ade174fed470a8"
+                ],
+                "connections": [],
+                "id": "5938eea5acf9492a83157f163a99881a",
+                "identifiers": [
+                    [
+                        "upnp",
+                        "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647_kbyte/sec_received"
+                    ]
+                ],
+                "manufacturer": "Xiaomi",
+                "model": null,
+                "name": "MiWiFi router kbyte/sec received",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "31d2db38b606463c98c9818735300fd8"
+                ],
+                "connections": [],
+                "id": "9747652d7a2c451cb30afdc21b885b15",
+                "identifiers": [
+                    [
+                        "owntracks",
+                        "thanhtt_mi9"
+                    ]
+                ],
+                "manufacturer": null,
+                "model": null,
+                "name": null,
+                "name_by_user": "Th\u00e0nh",
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "31d2db38b606463c98c9818735300fd8"
+                ],
+                "connections": [],
+                "id": "c2dcad10d3c54737be7adc58102ca06a",
+                "identifiers": [
+                    [
+                        "owntracks",
+                        "thanhtt_ipad"
+                    ]
+                ],
+                "manufacturer": null,
+                "model": null,
+                "name": null,
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "31d2db38b606463c98c9818735300fd8"
+                ],
+                "connections": [],
+                "id": "cf17645666664d2b94ef87a994e69fac",
+                "identifiers": [
+                    [
+                        "owntracks",
+                        "thanhtt_anhs_iphone_7_plus"
+                    ]
+                ],
+                "manufacturer": null,
+                "model": null,
+                "name": null,
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

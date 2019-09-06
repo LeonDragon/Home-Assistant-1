@@ -1,0 +1,101 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "cast",
+                "entry_id": "356b46d7182f49958b49824e5deb6fba",
+                "options": {},
+                "source": "zeroconf",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Google Cast",
+                "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {},
+                "domain": "ios",
+                "entry_id": "a1a6e636ef5a4a019904c53442f18dc3",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Home Assistant iOS",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "udn": "uuid:4494e961-d58b-41ac-9de2-a6bc8efe2647"
+                },
+                "domain": "upnp",
+                "entry_id": "f9d129acaa1c454893ade174fed470a8",
+                "options": {},
+                "source": "discovery",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "UPnP/IGD",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "cloudhook": false,
+                    "webhook_id": "0da811b5ef596cadd719e3c375e93893ce6ba98dfc7b1ae23a363fdce5e3ec6e"
+                },
+                "domain": "ifttt",
+                "entry_id": "49326fc3d710432c9907493097f52e94",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "IFTTT Webhook",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "broker": "thanhtt.duckdns.org",
+                    "discovery": true,
+                    "password": "iPhone181",
+                    "port": 1883,
+                    "username": "thanhtt"
+                },
+                "domain": "mqtt",
+                "entry_id": "c036ba4d2d5e4035a4417557d2e4b921",
+                "options": {},
+                "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "thanhtt.duckdns.org",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "cloudhook": false,
+                    "secret": "30feb6140c7fe82f150e72d0b4dfde76",
+                    "webhook_id": "c724617df6ba7b6b4d7cfd54b0048b7d74c38ceb159f490b881a1ae1b5c601a3"
+                },
+                "domain": "owntracks",
+                "entry_id": "31d2db38b606463c98c9818735300fd8",
+                "options": {},
+                "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "OwnTracks",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

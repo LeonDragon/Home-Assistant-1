@@ -1,0 +1,71 @@
+title: Automations
+icon: mdi:home-automation
+path: automations
+badges:
+cards:
+  - type: entities
+    style: |
+      ha-card {
+        border-radius: var(--card-border-radius);
+        background: var(--background-card);
+        --label-badge-text-color: var(--label-color-off);
+        color: var(--primary-text-color);
+        opacity: 0.8;
+      }
+    title: Automations
+    show_header_toggle: true
+    entities:
+      - automation.auto_start_duckdns
+      - automation.set_theme_when_hass_start
+      - automation.start_homekit
+      - automation.auto_update_location_when_hass_start
+      - automation.ifttt_webhook_received
+      - automation.auto_turn_off_bslamp_when_hass_start
+      - automation.auto_turn_off_yeelight_when_hass_start
+      - automation.play_ringtone_when_click_gate_switch
+      - automation.play_ringtone_when_gate_open
+      - automation.sent_notification_when_gate_close
+      - automation.turn_on_gate_light_when_gate_open
+      - automation.turn_off_gate_light_when_gate_close
+      - automation.auto_turn_on_living_room_light_when_get_home
+
+      - automation.turn_off_bedside_lamp_when_sunrise
+
+      - automation.notify_daily
+      - automation.notify_6h30_am
+
+      - automation.daikin_ac_set_fan_speed
+      - automation.daikin_ac_set_timer
+      - automation.turn_off_daikin_ac_when_sunrise
+      - automation.set_mode_when_turn_on_daikin_ac
+      - automation.click_both_button_to_set_sleeping
+      - automation.click_righ_button_to_turn_off_daikin_ac
+      - automation.click_righ_button_to_turn_on_daikin_ac
+      - automation.click_left_button_to_toggle_bedroom_fan
+
+
+      - automation.living_room_fan_toggle
+      - automation.hitachi_fan_set_speed
+      - automation.turn_off_hitachi_night_mode
+      - automation.turn_on_hitachi_night_mode_10h
+      -  automation.turn_off_hitachi_fan_night_mode_when_fan_off
+      - automation.turn_off_hitachi_fan_night_mode_10h_when_fan_off
+
+      - automation.send_notification_when_alarm_is_armed_in_away_mode
+      - automation.send_notification_when_alarm_is_armed_in_home_mode
+      - automation.send_notification_when_alarm_is_armed_in_night_mode
+      - automation.send_notification_when_alarm_is_disarmed
+
+
+      - automation.notify_when_anh_leave_anhs_hometown
+      - automation.notify_when_anh_leave_home
+      - automation.notify_when_anh_leave_home_town
+      - automation.notify_when_anh_leave_kien_long_bank
+      - automation.notify_when_anh_leave_hotel
+      - automation.notify_when_anh_leave_school
+      - automation.notify_when_anh_to_anhs_hometown
+      - automation.notify_when_anh_to_home
+      - automation.notify_when_anh_to_home_town
+      - automation.notify_when_anh_to_kien_long_bank
+      - automation.notify_when_anh_to_hotel
+      - automation.notify_when_anh_to_school

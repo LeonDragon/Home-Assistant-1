@@ -1,0 +1,145 @@
+title: Currently On
+path:  currently-on
+icon: mdi:lightbulb-on-outline
+cards:
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '##### Quick Access'
+      - type: horizontal-stack
+        cards:
+          - !include ../decluttering_templates/blank-card.yaml
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Home
+              - icon: home
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/home
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Lights
+              - icon: ceiling-light
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/lights
+                  haptic: light
+          - type: 'custom:decluttering-card'
+            template: navigation_button
+            variables:
+              - entity: input_boolean.dummy1
+              - name: Climate
+              - icon: thermostat
+              - size: 15%
+              - aspect_ratio: 2/1
+              - border-radius: 0px
+              - show_label: false
+              - show_state: false
+              - justify-self-name: center
+              - padding-left-name: 0px
+              - color: '#ffffff'
+              - margin-right: 0px
+              - opacity: 0.8
+              - off_name_color: var(--name-color-off)
+              - tap_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+              - hold_action:
+                  action: navigate
+                  navigation_path: /lovelace/climate
+                  haptic: light
+          - !include ../decluttering_templates/blank-card.yaml
+
+  - type: vertical-stack
+    cards:
+      - type: custom:decluttering-card
+        template: header_text
+        variables:
+          - content: '## Currently ON'
+      - type: custom:auto-entities
+        show_empty: false
+        card:
+          type: glance
+          title: Lights
+          show_state: false
+        filter:
+          include:
+            - domain: light
+          exclude:
+          - state: "off"
+          - state: "unavailable"
+      - type: custom:auto-entities
+        show_empty: false
+        card:
+          type: glance
+          title: Switchs
+          show_state: false
+        filter:
+          include:
+            - domain: switch
+          exclude:
+          - state: "off"
+          - state: "unavailable"
+      - type: custom:auto-entities
+        show_empty: false
+        card:
+          type: glance
+          title: Climates
+          show_state: false
+        filter:
+          include:
+            - domain: fan
+            - domain: climate
+          exclude:
+          - state: "off"
+          - state: "unavailable"
+      - type: custom:auto-entities
+        show_empty: false
+        card:
+          type: glance
+          title: Media Players
+          show_state: false
+        filter:
+          include:
+            - domain: media_player
+          exclude:
+          - state: "off"
+          - state: "unavailable"
